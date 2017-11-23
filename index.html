@@ -1,7 +1,75 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link href="style/my.css" rel="stylesheet" type="text/css" />
+	<title>He He - UMD</title>
+	<script>
+	function copy(dest, source) {
+  		if(dest.source == source) {
+  		  dest.innerHTML = "";
+  		  dest.source = null;
+  		}
+  		else {
+  		  dest.innerHTML = source.innerHTML;
+  		  dest.source = source;
+  		}
+  		dest.blur();
+	}
+	</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script> 
+    $(function(){
+      $("#includepubs").load("publication.html"); 
+    });
+    </script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<div id="wrapper">
+
+
+<!-- header info -->
+<div id="header">
+<div id="profile">
+	<img src="figures/me2016.jpg">
+</div>
+<div id="contact">	
+	<table border="0">
+	<tr>
+	<td><font size=4><b>He He</b> &nbsp;</font></td>
+	<td><img align=right src="figures/name.png"></td>
+	<td><font size="2">&nbsp; (<a href="pronunciation.html">How to pronounce?</a>)</font></td>
+	</tr>
+	</table>
+	<br>
+	Gates 254 <br>
+	Stanford University <br>
+    <p><font face="courier">hehe@cs.stanford.edu</font></p>
+</div>
+</div>
+
+<!-- site navigation menu -->
+<div id="navbar">
+<ul>
+	<li><a href="#pubs">Publications</a>
+	<li><a href="docs/cv/cv.pdf">CV</a>
+</ul>
+</div>
+
+<!-- main content -->
+<div id="content">
+<div class="section">
+    I am a post-doc researcher at Stanford University, working with <a href=http://cs.stanford.edu/~pliang/>Percy Liang</a>. Prior to Stanford, I got my Ph.D. in Computer Science at the <a href=http://www.umd.edu/>University of Maryland, College Park</a>, advised by <a href=http://www.umiacs.umd.edu/~hal/>Hal Daum&eacute; III</a> and <a href=http://boydgraber.org>Jordan Boyd-Graber</a>.
+My interests are at the interface between machine learning and natural language processing.
+I develop algorithms that acquire information dynamically and do inference incrementally, with an emphasis on problems in natural language processing.
+More recently, I have been working on task-oriented dialogue systems.
+</div>
+<hr color="#">
+<div class="section">
+<div class="section_title"><p id="pubs">Publications  [<a href="https://scholar.google.com/citations?user=K-isjagAAAAJ&hl=en"><font size="3">Google Scholar</font></a>]</p></div>
+<div id="includepubs"></div>
+</div>
+<!-- content end -->
+</div>
 </body>
-</html>

@@ -1,0 +1,126 @@
+div#wrapper {
+	margin: auto;
+	width: 800px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ffffff;
+}
+
+p {
+	padding: 0.5em 0;
+}
+
+a {
+	color: #118c4e;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+hr {
+  color: #c1e1a6;
+}
+
+div#header {
+	width: 800px;
+	height: 300px;
+	font-family: Helvetica, Verdana, Geneva, Arial, sans-serif;
+	font-size: 12pt;
+	background-color: #ffffff;
+}
+	
+
+div#contact {
+	float: none;
+	padding: 3.5em 0 1em 2em;
+    line-height: 120%;
+    font-size: 12pt; 
+}
+
+div#profile {
+	float: left;
+	padding: 10px 50px 0 40px;
+}
+
+div#navbar {
+	float: none;
+	font-size: 18px;
+	font-family: Helvetica, Verdana, Geneva, Arial, sans-serif;
+	height: 2em;
+	padding: 0 1em 0 1em;
+	border-bottom: 2px solid #c1e1a6;
+	list-style: none;
+}
+
+div#navbar ul {
+	float: left;
+	list-style: none;
+}
+
+div#navbar li {
+	float: left;
+	list-style: none;
+	padding: 0.5em 1em;
+}
+
+div#navbar li a {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	font-family: Arial, sans-serif
+}
+
+div#navbar li a:hover {
+	color: #000000;
+}
+
+div#content {
+	float: none;
+	background-color: #ffffff; 
+	color: #000000;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12pt;
+  line-height: 120%;
+  padding: 0;
+	width: 800px;
+}
+
+div.section{
+	float: none;
+	margin: 2em;
+}
+
+div.abstract {
+	margin: 1em 0em 0em 1.5em;
+}
+
+div.bib{
+	font-size: 14px;
+	margin: 1em 0em 0em 1.5em;
+}
+
+div.section_title {
+	float: none;
+	background-color: #ffffff; 
+	color: #000000;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15pt;
+  padding: 0;
+}
+
+.author {
+  color: #5b2503;
+}
+
+.award {
+  font-weight: bold;
+  color: #000000;
+}
