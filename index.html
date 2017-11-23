@@ -4,78 +4,146 @@
 	<link href="style/my.css" rel="stylesheet" type="text/css" />
 	<title>He He - UMD</title>
 	<script>
-	function copy(dest, source) {
-  		if(dest.source == source) {
-  		  dest.innerHTML = "";
-  		  dest.source = null;
-  		}
-  		else {
-  		  dest.innerHTML = source.innerHTML;
-  		  dest.source = source;
-  		}
-  		dest.blur();
-	}
+		function copy(dest, source) {
+			if(dest.source == source) {
+				dest.innerHTML = "";
+				dest.source = null;
+			}
+			else {
+				dest.innerHTML = source.innerHTML;
+				dest.source = source;
+			}
+			dest.blur();
+		}
 	</script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script> 
-    $(function(){
-      $("#includepubs").load("publication.html"); 
-    });
-    </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script> 
+		$(function(){
+			$("#includepubs").load("publication.html"); 
+		});
+	</script>
 </head>
+
+
+
+
 
 <body>
 
-<div id="wrapper">
+	<div id="wrapper">
+		<!-- header info -->
+		<div id="header">
+			<div id="profile">
+				<img src="figures/me2016.jpg">
+			</div>
+			<div id="contact">	
+				<table border="0">
+					<tr>
+						<td><font size=4><b>Shizhe Diao</b> &nbsp;</font></td>
+						<td><img align=right src="figures/name.png"></td>
+						<td><font size="2">&nbsp; (<a href="pronunciation.html">How to pronounce?</a>)</font></td>
+					</tr>
+				</table>
+				<br>
+				College of Information Science and Technology <br>
+				Beijing Normal University <br>
+				<p><font face="courier">shizhe.diao@mail.bnu.edu.cn</font></p>
+			</div>
+		</div>
 
+		<!-- main content -->
+		<div id="content">
+			<div class="section">
+				I am now an undergraduage at Beijing Normal University, majoring in Computer Science.
+				As an intern at Peking University, I'm now working with <a href=http://www.icst.pku.edu.cn/lcwm/wanxj/>Xiaojun Wan</a>. 
+				I am full of curiosity about my major and have published a SCI paper.
 
-<!-- header info -->
-<div id="header">
-<div id="profile">
-	<img src="figures/me2016.jpg">
-</div>
-<div id="contact">	
-	<table border="0">
-	<tr>
-	<td><font size=4><b>Shizhe Diao</b> &nbsp;</font></td>
-	<td><img align=right src="figures/name.png"></td>
-	<td><font size="2">&nbsp; (<a href="pronunciation.html">How to pronounce?</a>)</font></td>
-	</tr>
-	</table>
-	<br>
-	College of Information Science and Technology <br>
-	Beijing Normal University <br>
-    <p><font face="courier">shizhe.diao@mail.bnu.edu.cn</font></p>
-</div>
-</div>
+				As a captain, I led my teammates to participate in the World Robot Olympic (WRO) and won the second place in India.
 
-<!-- site navigation menu -->
-<div id="navbar">
-<ul>
-	<li><a href="#pubs">Publications</a>
-	<li><a href="docs/cv/cv.pdf">CV</a>
-</ul>
-</div>
+				My main research interests lie within deep learning for natural language processing.
+				More recently, I have been working on natural language generation. I'm concentrating on building a classical Chinese quatrain generator based on the RNN encoder-decoder framework.
 
-<!-- main content -->
-<div id="content">
-<div class="section">
-	I am now an undergraduage at Beijing Normal University, majoring in Computer Science.
-	As an intern at Peking University, I'm now working with <a href=http://www.icst.pku.edu.cn/lcwm/wanxj/>Xiaojun Wan</a>. 
-	I am full of curiosity about my major and have published a SCI paper.
+			</div>
 	
-	As a captain, I led my teammates to participate in the World Robot Olympic (WRO) and won the second place in India.
+		
+				<h3>Honors and Awards</h3>
+				<ul type="square" style="line-height:30px">
+					<li>  The Second place in the World Robot Olympic (WRO), India, 2016 </li>  
+					<li>  The Fisrt Prize in Mathematical Contest in Modelling of BNU, 2016 </li>
+					<li>  The First Prize in Tufts University STEM summer school, 2015 </li>
+					<li>  The Second Prize in Collegiate Programming Contest of BNU, 2016 </li>
+					<li>  Outstanding Volunteer in non-formal education project of UNICEF, 2015 </li>
+					<li>  Excellent volunteer in BRICS National Education Forum, 2015 </li>
+					<li>  PKU P&G Scholarship, 2008 </li>
+					<li>  Beijing Nova Program, 2008 </li>
+					<li>  The MOE Program for New Century Excellent Talents in University (NCET), 2008 </li>
+				</ul>
 
-	My main research interests lie within deep learning for natural language processing.
-	More recently, I have been working on natural language generation. I'm concentrating on building a classical Chinese quatrain generator based on the RNN encoder-decoder framework.
+
+				<h3>Education</h3>
+
+				<ul>
+					2015-   		Beijing Normal University, Beijing, China
+					Bachelor in Computer Science
+					2017.9-2017.12  The Chinese University of Hong Kong, Hong Kong SAR, China
+					Exchange Student
+					2017.7-2017.8   Ben-Gurion University of the Negev, IBeer Sheva, srael  
+					Summer research intern
+					<li><b> Area Chair</b>: IJCNLP 2017 (Summarization and Generation) </li>
+					<li><b> Editorial Board Member</b>: Computational Linguistics (2016-2018) </li>
+					<li><b> Senior PC Member(SPC)</b>: IJCAI 2016 </li>
+					<li><b> Area Chair</b>: NAACL-HLT 2016 </li>	
+					<li><b> Area Chair</b>: CCL 2016 (Text Classification and Summarization) </li>	
+					<li><b> Best Paper Committee</b>: EMNLP 2015 </li>	  
+					<li><b> Area Chair</b>: ACL-IJCNLP 2015 (Summarization and Generation) </li>
+					<li><b> Standing Reviewing Committee</b>: TACL (2014~2018) </li>
+					<li><b> Area Chair</b>: NLPCC 2014 (Web Mining & Big Data) </li>
+					<li><b> Area Chair</b>: ACL 2011 (Sentiment Analysis, Opinion Mining and Text Classification) </li>
+					<li><b> Area Chair</b>: IJCNLP 2011 (Summarization and Generation) </li>
+					<li><b> Workshop Organizer</b>: ACL Workshop on Multilingual Modeling (MM-2012) </li>
+					<li><b> Evaluation Chair</b>: NLPCC 2012~2017 </li>
+					<li>Program Committee Member and Reviewer of most major conferences (e.g. ACL, SIGIR, EMNLP, WWW, CIKM, COLING, NAACL, AAAI) and journals in the field.</li>
+				</ul>
 
 
-</div>
-<hr color="#">
-<div class="section">
-<div class="section_title"><p id="pubs">Publications  [<a href="https://scholar.google.com/citations?user=K-isjagAAAAJ&hl=en"><font size="3">Google Scholar</font></a>]</p></div>
-<div id="includepubs"></div>
-</div>
-<!-- content end -->
+				<h3>Shared Tasks and Evaluations</h3>
+				<ul>
+					<li><b>Single Document Summarization (Chinese)</b> @ NLPCC 2017 (<a href="http://tcci.ccf.org.cn/conference/2017/taskdata.php">link</a>, <a href="files/NLPCC2017-Overview.pdf">overview paper</a>, <a href="ttps://pan.baidu.com/s/1bppQ4z1">data</a>) </li>
+					<li><b>Sports News Generation from Live Webcast scripts</b> @ NLPCC-ICCPOL 2016 (<a href="http://tcci.ccf.org.cn/conference/2016/pages/page05_evadata.html">link</a>, <a href="files/NLPCC2016-Overview.pdf">overview paper</a>, <a href="files/NLPCC2016Eval-Task5-AllData.rar">data</a>) </li>
+					<li><b>Weibo-Oriented Chinese News Summarization</b> @ NLPCC 2015 (<a href="http://tcci.ccf.org.cn/conference/2015/pages/page05_evadata.html">link</a>, <a href="files/NLPCC2015-Overview.pdf">overview paper</a>, <a href="files/NLPCC2015Eval-Task4-AllData.rar">data</a>)</li>
+					<li><b>Cross-Lingual Sentiment Classification</b> @ NLPCC 2013 (<a href="http://tcci.ccf.org.cn/conference/2013/pages/page04_eva.html">link</a>, <a href="files/NLPCC2013-Overview.ppt">overview slides</a>, <a href="files/NLPCC2013CLSentimentData.zip">data</a>)</li>
+				</ul>
+
+				<h3>Selected Systems</h3>
+				<ul>
+					<li><b>XiaoNan</b> : A data-to-text generation system for writing people's livelihood news. The system has been deployed in Southern Metropolis Daily and it can write news articles in various domains, including weather reports, train tickets, etc. See examples <a href="http://m.mp.oeeee.com/u/1534.html">here</a>. </li>
+					<li><b>PKUWriter</b> : A system for constructing sports news from live text commentary (<a href="files/acl16_sports.pdf">paper</a>). The technology has been transferred to Toutiao's AI reporter - <a href="http://www.toutiao.com/m50050770286/">Xiaomingbot</a> and further used by Guangmingwang in the <a href="http://sports.gmw.cn/node_9629.htm">GuangMing AI reporter</a>.</li>
+					<li><b>PKUSUMSUM</b> : A Java platform for multilingual document summarization (<a href="http://www.icst.pku.edu.cn/lcwm/wanxj/pkusumsum.htm">link</a>) </li>
+				</ul>
+
+
+
+				<h3>Students</h3>
+				<ul>
+					<li><b>PhD students</b>: Jiwei Tan, Fang Liu, Hongyu Zang, Ke Wang</li>
+					<li><b>Master students</b>: Jianmin Zhang, Kui Xu, Junjie Cao, Tianming Wang</li>
+					<li><b>Undergraduate students</b>: Shikang Du, Wei Wei, Hui Liu, Xinyu Xing, Liunian Li, Yin Li, Yitao Cai, Shizhe Diao, Sheng Xu, Zi Chai, Wentao Qin, Shixun Wu, Tianyu Liu, Xiaohong Dong</li>
+				</ul>
+
+				<h3>Alumni</h3>
+				<ul>
+					<li><b>PhD</b>: Xiaojiang Huang(Microsoft),  Jin-ge Yao(MSRA), Xinjie Zhou(Microsoft)</li>
+					<li><b>MS</b>: Tengfei Ma(IBM), Liqiang Guo(Microsoft), Houping Jia(IBM), Shanshan Huang(China Life Insurance), Xuewei Tang(WeCash), Yue Hu(Alibaba), Su Yan(CreditEase), Yantao Du(Google->Naturali), Shiyang Wen(Zhixiaole.com), Yang Yu(An Army Unit), Xun Zhang(IA,CAS)</li>
+					<li>I have also worked with many diligent, honest and talented undergraduate students. </li>
+				</ul>
+
+	
+		<!-- content end -->
+	</div>
 </div>
 </body>
+</html>
+
+
+
+

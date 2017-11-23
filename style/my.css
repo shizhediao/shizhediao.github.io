@@ -2,6 +2,16 @@ div#wrapper {
 	margin: auto;
 	width: 800px;
 }
+h3{
+	margin: 0px 30px;
+	padding: 0px 0px;
+}
+
+li {
+margin: 0px 80px;
+padding: 0px 0px;
+}
+
 
 * {
 	margin: 0;
@@ -50,37 +60,7 @@ div#profile {
 	padding: 10px 50px 0 40px;
 }
 
-div#navbar {
-	float: none;
-	font-size: 18px;
-	font-family: Helvetica, Verdana, Geneva, Arial, sans-serif;
-	height: 2em;
-	padding: 0 1em 0 1em;
-	border-bottom: 2px solid #c1e1a6;
-	list-style: none;
-}
 
-div#navbar ul {
-	float: left;
-	list-style: none;
-}
-
-div#navbar li {
-	float: left;
-	list-style: none;
-	padding: 0.5em 1em;
-}
-
-div#navbar li a {
-	display: block;
-	text-decoration: none;
-	color: #000000;
-	font-family: Arial, sans-serif
-}
-
-div#navbar li a:hover {
-	color: #000000;
-}
 
 div#content {
 	float: none;
