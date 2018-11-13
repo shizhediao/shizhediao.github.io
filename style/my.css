@@ -1,6 +1,6 @@
 div#wrapper {
 	margin: auto;
-	width: 800px;
+	width: 900px;
 }
 h3{
 	margin: 0px 30px;
@@ -31,7 +31,7 @@ p {
 }
 
 a {
-	color: #118c4e;
+	color: #00688B;
 	text-decoration: none;
 }
 
@@ -44,17 +44,17 @@ hr {
 }
 
 div#header {
-	width: 800px;
 	height: 300px;
 	font-family: Helvetica, Verdana, Geneva, Arial, sans-serif;
 	font-size: 12pt;
 	background-color: #ffffff;
+	padding: 2em 0 0 0;
 }
 	
 
 div#contact {
 	float: none;
-	padding: 3.5em 0 1em 2em;
+	padding: 3em 0 1em 2em;
     line-height: 120%;
     font-size: 12pt; 
 }
@@ -70,11 +70,10 @@ div#content {
 	float: none;
 	background-color: #ffffff; 
 	color: #000000;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12pt;
   line-height: 120%;
   padding: 0;
-	width: 800px;
 }
 
 div.section{
