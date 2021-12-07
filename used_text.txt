@@ -1,0 +1,8 @@
+		
+				<p>
+					As an intern at <a href="http://www.icst.pku.edu.cn/lcwm/">The Language Computing and Web Mining Group</a> of Peking University, advised by Prof. <a href="http://www.icst.pku.edu.cn/lcwm/wanxj/">Xiaojun Wan</a>, I focus on designing a novel framework to generate Chinese poems automatically for any essay, such as news. 
+				</p>
+
+				<p>
+					I was a research intern at <a href="http://wing.comp.nus.edu.sg/">Web Information Retrieval Natural Language Processing Group (WING)</a> of National University of Singapore, supervised by Prof. <a href="https://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</a> and Wenqiang Lei. I was working on neural dialogue generation with semi-supervision. 
+				</p>	
