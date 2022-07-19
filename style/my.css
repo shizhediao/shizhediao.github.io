@@ -28,6 +28,7 @@ body {
 
 p {
 	padding: 0.5em 0;
+	line-height:150%
 }
 
 a {
@@ -41,6 +42,14 @@ a:hover {
 
 hr {
   color: #c1e1a6;
+}
+
+td {
+	line-height:150%
+}
+
+ul {
+	line-height:200%
 }
 
 div#header {
