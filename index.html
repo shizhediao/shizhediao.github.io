@@ -1,94 +1,240 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110065423-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-110065423-1');
-	</script>
-	<link href="https://fonts.googleapis.com/css?family=Archivo:600|Noto+Serif|Roboto|Open+Sans" rel="stylesheet">
-
-	<link href="style/my.css" rel="stylesheet" type="text/css" />
-	<title>Shizhe Diao</title>
-	<script>
-		function copy(dest, source) {
-			if(dest.source == source) {
-				dest.innerHTML = "";
-				dest.source = null;
-			}
-			else {
-				dest.innerHTML = source.innerHTML;
-				dest.source = source;
-			}
-			dest.blur();
-		}
-	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script> 
-		$(function(){
-			$("#includepubs").load("publication.html"); 
-		});
-	</script>
-</head>
-
+	<head>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+		<style type="text/css">
+		  /* Color scheme stolen from Sergey Karayev */
+	  
+		  a {
+			color: #1772d0;
+			text-decoration: none;
+		  }
+	  
+		  a:focus,
+		  a:hover {
+			color: #f09228;
+			text-decoration: none;
+		  }
+	  
+		  body,
+		  td,
+		  th,
+		  tr,
+		  p,
+		  a {
+			font-family: 'Lato', Verdana, Helvetica, sans-serif;
+			font-size: 14px
+		  }
+	  
+		  strong {
+			font-family: 'Lato', Verdana, Helvetica, sans-serif;
+			font-size: 14px;
+		  }
+	  
+		  heading {
+			font-family: 'Lato', Verdana, Helvetica, sans-serif;
+			font-size: 22px;
+		  }
+	  
+		  papertitle {
+			font-family: 'Lato', Verdana, Helvetica, sans-serif;
+			font-size: 14px;
+			font-weight: 700
+		  }
+	  
+		  name {
+			font-family: 'Lato', Verdana, Helvetica, sans-serif;
+			font-size: 32px;
+		  }
+	  
+		  .one {
+			width: 160px;
+			height: 160px;
+			position: relative;
+		  }
+	  
+		  .two {
+			width: 160px;
+			height: 160px;
+			position: absolute;
+			transition: opacity .2s ease-in-out;
+			-moz-transition: opacity .2s ease-in-out;
+			-webkit-transition: opacity .2s ease-in-out;
+		  }
+	  
+		  .fade {
+			transition: opacity .2s ease-in-out;
+			-moz-transition: opacity .2s ease-in-out;
+			-webkit-transition: opacity .2s ease-in-out;
+		  }
+	  
+	  
+		  .boxed {
+			border: 1px dashed #990000 ;
+			display: inline-block;
+		  }
+	  
+		  span.highlight {
+			background-color: #ffffd0;
+		  }
+		</style>
+		<style type="text/css">
+		  #sectiontohide {
+			padding: 20px;
+			background: #f0f0f0;
+			width: 400px;
+		  }
+		</style>
+		<script type="text/javascript">
+		  function toggle_div_fun(id) {
+	  
+			var divelement = document.getElementById(id);
+	  
+			if (divelement.style.display == 'none')
+			  divelement.style.display = 'block';
+			else
+			  divelement.style.display = 'none';
+		  }
+		</script>
+	  
+		<script type="text/javascript">
+		 function visibility_on(id) {
+			  var e = document.getElementById(id+"_text");
+			  if(e.style.display == 'none')
+				  e.style.display = 'block';
+			  var e = document.getElementById(id+"_img");
+			  if(e.style.display == 'none')
+				  e.style.display = 'block';
+		 }
+		 function visibility_off(id) {
+			  var e = document.getElementById(id+"_text");
+			  if(e.style.display == 'block')
+				  e.style.display = 'none';
+			  var e = document.getElementById(id+"_img");
+			  if(e.style.display == 'block')
+				  e.style.display = 'none';
+		 }
+		 function toggle_visibility(id) {
+			 var e = document.getElementById(id+"_text");
+			 if(e.style.display == 'inline')
+				e.style.display = 'block';
+			 else
+				e.style.display = 'inline';
+			 var e = document.getElementById(id+"_img");
+			 if(e.style.display == 'inline')
+				e.style.display = 'block';
+			 else
+				e.style.display = 'inline';
+		 }
+		 function toggle_vis(id) {
+			 var e = document.getElementById(id);
+			 if (e.style.display == 'none')
+				 e.style.display = 'inline';
+			 else
+				 e.style.display = 'none';
+		 }
+	  </script>
+	  
+		<title>Shizhe Diao</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	  </head>
 
 <body>
 
 	<div id="wrapper">
 		<!-- header info -->
-		<div id="header">
-			<div id="profile">
-				<img src="figures/me20230102.jpg" height=300 width=200>
-			</div>
-			<div id="contact">	
-				<br>
-				<strong><font size=5>Shizhe Diao</font size></strong> <br>
-				<br>
-				<a href="https://statml.hkust.edu.hk/">Statistics and Machine Learning Research Group</a> <br>
-				<br>
-				The Hong Kong University of Science and Technology <br>
-				<br>
-				<!-- <p> -->
-				<a href="mailto:sdiaoaa@connect.ust.hk" target="_blank">Email <img src="figures/email-logo.jpg" width="2%" style="margin-left: auto; margin-right: auto;"> </a>  &nbsp/&nbsp
-				<a href="https://scholar.google.com/citations?user=NDFQrLQAAAAJ&hl=en" target="_blank">Google Scholar <img src="figures/google-scholar-logo.png" width="2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp/&nbsp
-				<a href="https://github.com/shizhediao" target="_blank">Github <img src="figures/github-logo.png" width="2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp/&nbsp
-				<a href="https://www.linkedin.com/in/shizhediao/en?originalSubdomain=cn" target="_blank">LinkedIn <img src="figures/linkedin-logo.jpg" width="2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp
-				  <!-- </p> -->
-				<br>
-			</div>
-		</div>
 
+		<table width="1000" border="0" align="center" cellspacing="0" cellpadding="0">
+			<tr>
+			  <td>
+				<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+				  <tr>
+					<td width="67%" valign="middle">
+					  <p align="center">
+						<name>Shizhe Diao</name>
+					  </p>
+					  <p>
+						I am now a final-year Ph.D. candidate at the Hong Kong University of Science and Technology, advised by Professor <a href="http://tongzhang-ml.org/">Tong Zhang</a>. 
+						Currently, I am a visiting scholar in <a href="http://blender.cs.illinois.edu/index.html">BLENDER LAB@UIUC</a>, under the supervision of <a href="http://blender.cs.illinois.edu/hengji.html">Prof. Heng Ji</a>.
+						I received my Master of Philosophy degree at HKUST in 2021.
+					  </p>
+					  <p>
+						Before joining HKUST, I received my Bachelor of Science degree at Beijing Normal University in 2019. 
+						I was a research intern at <a href="https://ailab.bytedance.com/">ByteDance AI Lab</a> with Dr. <a href="https://scholar.google.com/citations?user=nTl5mSwAAAAJ&hl=en">Hang Li</a> and Dr. <a href="https://scholar.google.com/citations?user=BnSQUocAAAAJ&hl=en">Xinsong Zhang</a>, and <a href="https://www.sinovationventures.com/ai">Sinovation Ventures AI Institute</a>.
+						During my undergraduate study, I interned at <a href="http://wing.comp.nus.edu.sg/">WING Group @ NUS</a> and <a href="https://english.pku.edu.cn/">PKU</a>, where I was fortunate to work with Prof. <a href="https://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</a> and Prof. <a href="https://wanxiaojun.github.io/">Xiaojun Wan</a>.
+						My research focuses on pre-training, efficient-tuning, and adaptation of large language models.	
+					  </p>
+					  <p align=center>
+						<a href="mailto:sdiaoaa@connect.ust.hk" target="_blank">Email <img src="figures/email-logo.jpg" width="2%" style="margin-left: auto; margin-right: auto;"> </a>  &nbsp/&nbsp
+						<a href="https://scholar.google.com/citations?user=NDFQrLQAAAAJ&hl=en" target="_blank">Google Scholar <img src="figures/google-scholar-logo.png" width="2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp/&nbsp
+						<a href="https://github.com/shizhediao" target="_blank">Github <img src="figures/github-logo.png" width="2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp/&nbsp
+						<a href="https://www.linkedin.com/in/shizhediao/en?originalSubdomain=cn" target="_blank">LinkedIn <img src="figures/linkedin-logo.jpg" width="2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp
+					  </p>
+
+
+
+					</td>
+					<td width="33%">
+					  <script type="text/javascript" language="JavaScript">
+						// Specify the first and last part of the image tag. 
+						var images = ['"pictures/IMG_1.jpg" height="256" width="256">',
+						  '"pictures/IMG_2.jpg" height="256" width="256">',
+						  '"pictures/IMG_3.jpg" height="256" width="256">',
+						  '"pictures/IMG_4.jpg" height="256" width="256">',
+						  '"pictures/IMG_5.jpg" height="256" width="256">',
+						  '"pictures/IMG_6.jpg" height="256" width="256">',
+						  '"pictures/IMG_7.jpg" height="256" width="256">',
+						  '"pictures/IMG_8.jpg" height="256" width="256">',
+						  '"pictures/IMG_9.jpg" height="256" width="256">'
+						];
+						start = '<img src=';
+		
+						function printImage() {
+						  var rand_int = Math.floor(Math.random() * 9);
+						  document.write(start + images[rand_int]);
+						}
+					  </script>
+					  <script type="text/javascript" language="JavaScript">
+						printImage();
+					  </script>
+					</td>
+				  </tr>
+				</table>
 
 		<!-- main content -->
-		<div id="content">
-			<div class="section">
-				<p>
-					I am now a final-year Ph.D. candidate at the Hong Kong University of Science and Technology, advised by Professor <a href="http://tongzhang-ml.org/">Tong Zhang</a>. 
-					Currently, I am a visiting scholar in <a href="http://blender.cs.illinois.edu/index.html">BLENDER LAB@UIUC</a>, under the supervision of <a href="http://blender.cs.illinois.edu/hengji.html">Prof. Heng Ji</a>.
-					I received my Master of Philosophy degree at HKUST in 2021.
-					Before joining HKUST, I received my Bachelor of Science degree at Beijing Normal University in 2019. 
-					I was a research intern at <a href="https://ailab.bytedance.com/">ByteDance AI Lab</a> with Dr. <a href="https://scholar.google.com/citations?user=nTl5mSwAAAAJ&hl=en">Hang Li</a> and Dr. <a href="https://scholar.google.com/citations?user=BnSQUocAAAAJ&hl=en">Xinsong Zhang</a>, and <a href="https://www.sinovationventures.com/ai">Sinovation Ventures AI Institute</a>.
-					During my undergraduate study, I interned at <a href="http://wing.comp.nus.edu.sg/">WING Group @ NUS</a> and <a href="https://english.pku.edu.cn/">PKU</a>, where I was fortunate to work with Prof. <a href="https://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</a> and Prof. <a href="https://wanxiaojun.github.io/">Xiaojun Wan</a>.
-					My research focuses on pre-training, efficient-tuning, and adaptation of large language models.					
-				</p>	
-				</div>
 
-		<h3>News</h3>
-				<br />
-	
+
+		<div id="content">
+
+			<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+				<tr>
+				  <td width="100%" valign="middle">
+					<heading>News</heading>
+				  </td>
+				</tr>
+			  </table>
+			  <table width="95%" align="center" border="0" cellspacing="0" cellpadding="10">
+				<tr>
+				  <td>
+					<p>
+					  <li> I am visiting <a href="http://blender.cs.illinois.edu/index.html">BLENDER LAB@UIUC</a> from August 2023 to January 2024. </li>
+					  <li> Attended ICML 2023 at Hawaii.
+					  <li> One paper was accepted by ICCV 2023.
+					  <li> Two papers were accepted by ACL 2023.
+					  <li> Attended ICLR 2023 at Kigali, Rwanda.
+					  <li> Attended EMNLP 2022 at Abu Dhabi.
+					  <li> Our project <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> is released! LMFlow is a framework that allows fine-tuning and deploying personalized LLMs with minimal cost and effort. It has accumulated 7000+ stars⭐️ on Github. We hope that LMFlow will enable more creative and diverse applications of LLMs and foster a wider community of LLM enthusiasts!
+					  <li> Check out this curated <a href="https://github.com/shizhediao/ChatGPTPapers">paper list</a> about ChatGPT with the goal of helping everyone learn the techniques behind it.
+  
+				  </td>
+				</tr>
+			  </table>
+			  
+			  
 				<ul type="square">
-					<li> I am visiting <a href="http://blender.cs.illinois.edu/index.html">BLENDER LAB@UIUC</a> from August 2023 to January 2024. </li>
-					<li> Attended ICML 2023 at Hawaii.
-					<li> One paper was accepted by ICCV 2023.
-					<li> Two papers were accepted by ACL 2023.
-					<li> Attended ICLR 2023 at Kigali, Rwanda.
-					<li> Attended EMNLP 2022 at Abu Dhabi.
-					<li> Our project <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> is released! LMFlow is a framework that allows fine-tuning and deploying personalized LLMs with minimal cost and effort. It has accumulated 7000+ stars⭐️ on Github. We hope that LMFlow will enable more creative and diverse applications of LLMs and foster a wider community of LLM enthusiasts!
-					<li> Check out this curated <a href="https://github.com/shizhediao/ChatGPTPapers">paper list</a> about ChatGPT with the goal of helping everyone learn the techniques behind it.
 				</ul>
 
 		<br />
