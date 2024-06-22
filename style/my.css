@@ -149,3 +149,23 @@ div.section_title {
   font-weight: bold;
   color: #000000;
 }
+
+
+.accordion-content {
+	display: none;
+	overflow: hidden;
+	padding: 10px;
+}
+
+.accordion-toggle {
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	border: none;
+	background: #f7f7f7;
+	width: 100%;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}

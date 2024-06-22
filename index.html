@@ -3,6 +3,22 @@
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110065423-1"></script>
+	<link rel="stylesheet" href="https://cdn.staticfile.net/foundation/5.5.3/css/foundation.min.css">
+	<script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.net/foundation/5.5.3/js/foundation.min.js"></script>
+	<script src="https://cdn.staticfile.net/foundation/5.5.3/js/vendor/modernizr.js"></script>
+
+	
+			<!-- 初始化 Foundation JS 折叠列表-->
+	<script>
+		$(document).ready(function() {
+			$('.accordion-toggle').click(function() {
+				var content = $(this).next('.accordion-content');
+				$('.accordion-content').not(content).slideUp('fast'); // 其他所有元素折叠
+				content.slideToggle(400); // 切换当前元素的显示状态
+			});
+		});
+		</script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -33,6 +49,8 @@
 			$("#includepubs").load("publication.html"); 
 		});
 	</script>
+
+
 </head>
 
 
@@ -78,10 +96,11 @@
 				</p>	
 				</div>
 
+		
 		<h3>News</h3>
 				<br />
-	
 				<ul type="square">
+					<li> Excited to share our <a href="https://arxiv.org/abs/2311.09677">R-Tuning</a> got outstanding paper award@NAACL 2024, and <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> got Best Demo Paper award@NAACL 2024!
 					<li> One paper was accepted by ACL 2024 System Demonstration Track.
 					<li> Three papers were accepted by ACL 2024 and Findings including <a href="https://arxiv.org/abs/2302.12246">Active-Prompt</a>, <a href="https://arxiv.org/abs/2402.18571">Directional Preference Alignment</a>, and <a href="https://arxiv.org/abs/2311.08364">Prompt Learning using Metaheuristic</a>.
 					<li> <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> got accepted to NAACL 2024 Demo track!
@@ -89,16 +108,22 @@
 					<li> One paper was accepted by WWW 2024.
 					<li> One paper was accepted by EACL 2024.
 					<li> The <a href="https://arxiv.org/abs/2304.06767">RAFT</a> paper for alignment was accepted by TMLR 2023.
+				</ul>
+
+		<h3 class="accordion-toggle">More News</h3>
+		<div class="accordion-content">
+			<ul type="square">
 					<li> Three papers were accepted by EMNLP 2023 and Findings.
 					<li> Visited <a href="http://blender.cs.illinois.edu/index.html">BLENDER LAB@UIUC</a> from August 2023 to January 2024. </li>
-					<!-- <li> Attended ICML 2023 at Hawaii. -->
+					<li> Attended ICML 2023 at Hawaii.
 					<li> One paper was accepted by ICCV 2023.
 					<li> Two papers were accepted by ACL 2023.
-					<!-- <li> Attended ICLR 2023 at Kigali, Rwanda. -->
-					<!-- <li> Attended EMNLP 2022 at Abu Dhabi. -->
+					<li> Attended ICLR 2023 at Kigali, Rwanda.
+					<li> Attended EMNLP 2022 at Abu Dhabi.
 					<li> <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> is a framework that allows fine-tuning and deploying personalized LLMs with minimal cost and effort. It has accumulated <font color=red size=4 face="黑体">7, 000+</font> stars⭐️ on Github. We envision that LMFlow will enable more creative and diverse applications of LLMs and foster a wider community of LLM enthusiasts!
-					<!-- <li> Check out this curated <a href="https://github.com/shizhediao/ChatGPTPapers">paper list</a> about ChatGPT with the goal of helping everyone learn the techniques behind it. -->
-				</ul>
+					<li> Check out this curated <a href="https://github.com/shizhediao/ChatGPTPapers">paper list</a> about ChatGPT with the goal of helping everyone learn the techniques behind it.
+			</ul>
+		</div>
 
 		<!-- Education -->
 		<!-- <br />
@@ -187,11 +212,11 @@
 
 				<li><u><strong>Shizhe Diao*</strong></u>, Rui Pan*, Hanze Dong*, Ka Shun Shum, Jipeng Zhang, Wei Xiong, Tong Zhang
 					<br /> <a href="https://arxiv.org/abs/2306.12420">LMFlow: An Extensible Toolkit for Finetuning and Inference of Large Foundation Models</a>
-					<br /> NAACL 2024 Demo Track </li> 
+					<br /> NAACL 2024 Demo Track <font color=red size=4 face="黑体"><i>(Best Demo Paper)</i></font> </li> 
 
 				<li>Hanning Zhang*, <u><strong>Shizhe Diao*</strong></u>, Yong Lin*, Yi R. Fung, Qing Lian, Xingyao Wang, Yangyi Chen, Heng Ji, Tong Zhang
 					<br /> <a href="https://arxiv.org/abs/2311.09677">R-Tuning: Teaching Large Language Models to Refuse Unknown Questions	</a>
-					<br /> NAACL 2024 </li>  
+					<br /> NAACL 2024 <font color=red size=4 face="黑体"><i>(Outstanding Paper)</i></font> </li>  
 
 				<li>Xu Liu, Junfeng Hu, Yuan Li, <u><strong>Shizhe Diao</strong></u>, Yuxuan Liang, Bryan Hooi, Roger Zimmermann
 					<br /> <a href="https://arxiv.org/abs/2310.09751">UniTime: A Language-Empowered Unified Model for Cross-Domain Time Series Forecasting</a>
