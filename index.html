@@ -4,22 +4,21 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110065423-1"></script>
 	<!-- <link rel="stylesheet" href="https://cdn.staticfile.net/foundation/5.5.3/css/foundation.min.css"> -->
-	<script src="https://cdn.staticfile.net/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.net/foundation/5.5.3/js/foundation.min.js"></script>
 	<script src="https://cdn.staticfile.net/foundation/5.5.3/js/vendor/modernizr.js"></script>
 
-	
-			<!-- 初始化 Foundation JS 折叠列表-->
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('.accordion-toggle').click(function() {
-				var content = $(this).next('.accordion-content');
-				$('.accordion-content').not(content).slideUp('fast'); // 其他所有元素折叠
-				content.slideToggle(400); // 切换当前元素的显示状态
+				$(this).toggleClass('active');
+				$(this).next('.accordion-content').slideToggle();
 			});
 		});
-		</script>
-		
+	</script>
+
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
