@@ -61,13 +61,65 @@ img {
 }
 
 /* ============================================
+   Top Navigation Bar
+   ============================================ */
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+.nav-inner {
+  max-width: var(--max-width);
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+.nav-brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-text) !important;
+  white-space: nowrap;
+}
+.nav-brand:hover {
+  text-decoration: none;
+  color: var(--color-accent) !important;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+.nav-links a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Offset anchor targets so sticky nav doesn't cover them */
+.card[id] {
+  scroll-margin-top: 62px;
+}
+
+/* ============================================
    Wrapper
    ============================================ */
 #wrapper {
   max-width: var(--max-width);
   width: 92%;
   margin: 0 auto;
-  padding: 2rem 0 3rem;
+  padding: 1.5rem 0 3rem;
 }
 
 /* ============================================
@@ -377,6 +429,15 @@ hr {
   html {
     font-size: 15px;
   }
+  .nav-links {
+    gap: 0.9rem;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+  .nav-brand {
+    font-size: 0.95rem;
+  }
   #header {
     flex-direction: column;
     align-items: center;
@@ -401,6 +462,15 @@ hr {
 }
 
 @media (max-width: 480px) {
+  .nav-inner {
+    width: 96%;
+  }
+  .nav-links {
+    gap: 0.6rem;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+  }
   #wrapper {
     width: 96%;
   }
