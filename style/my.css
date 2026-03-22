@@ -1,169 +1,420 @@
-div#wrapper {
-	margin: auto;
-	width: 900px;
-}
-h3{
-	margin: 0px 30px;
-	padding: 0px 0px;
+/* ============================================
+   CSS Variables — single place to tweak palette
+   ============================================ */
+:root {
+  --color-bg: #f5f6f8;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #555;
+  --color-accent: #1a6fb5;
+  --color-accent-hover: #134d80;
+  --color-highlight: #dc2626;
+  --color-highlight-bg: #fef2f2;
+  --color-badge-bg: #e8f4f8;
+  --color-badge-text: #0e6b8a;
+  --color-border: #e5e7eb;
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 10px;
+  --max-width: 900px;
+  --font-body: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --transition: 0.2s ease;
 }
 
-li {
-margin: 0px 80px;
-padding: 0px 0px;
+/* ============================================
+   Reset & Base
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-table{
-	margin: 0px 30px;
-	padding: 0px 0px;
-}
-
-* {
-	margin: 0;
-	padding: 0;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-	background: #ffffff;
-}
-
-p {
-	padding: 0.5em 0;
-	line-height:150%
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-	color: #00688B;
-	text-decoration: none;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
 }
 
-a:hover {
-	text-decoration: underline;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   Wrapper
+   ============================================ */
+#wrapper {
+  max-width: var(--max-width);
+  width: 92%;
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+/* ============================================
+   Header / Hero
+   ============================================ */
+#header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 2.5rem 2.5rem 2rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+#profile {
+  flex-shrink: 0;
+}
+#profile img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+#contact {
+  flex: 1;
+  line-height: 1.6;
+  padding: 0;
+}
+#contact .name {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.6rem;
+}
+
+/* Social links row */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.8rem 0;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition);
+}
+.social-links a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.social-links a img,
+.social-links a svg {
+  width: 18px;
+  height: 18px;
+  opacity: 0.75;
+  transition: opacity var(--transition);
+  vertical-align: middle;
+}
+.social-links a:hover img,
+.social-links a:hover svg {
+  opacity: 1;
+}
+
+.email-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.4rem;
+}
+.email-line img {
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ============================================
+   Section Cards
+   ============================================ */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.2rem;
+  transition: box-shadow var(--transition);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 1.2rem 0;
+  padding: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+}
+
+/* Bio paragraph */
+div.section {
+  margin: 0;
+  float: none;
+}
+div.section p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ============================================
+   Highlight badge (replaces <font color=red>)
+   ============================================ */
+.badge-new {
+  display: inline-block;
+  background: var(--color-highlight-bg);
+  color: var(--color-highlight);
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-style: italic;
+  padding: 1px 8px;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.badge-award {
+  display: inline-block;
+  background: #fef9c3;
+  color: #92400e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-style: italic;
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.badge-venue {
+  display: inline-block;
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 3px;
+}
+
+.hiring {
+  background: linear-gradient(135deg, #fef2f2, #fff7ed);
+  border-left: 3px solid var(--color-highlight);
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #b91c1c;
+  font-style: italic;
+}
+
+.award-item {
+  color: var(--color-highlight);
+  font-weight: 600;
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+ul, ol {
+  line-height: 1.85;
+  padding-left: 1.4rem;
+}
+li {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+
+/* News items */
+ul[type="square"] li {
+  list-style: none;
+  position: relative;
+  padding-left: 1rem;
+}
+ul[type="square"] li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  background: var(--color-accent);
+  border-radius: 1px;
+}
+
+/* Publication ordered list */
+ol[type="square"] {
+  counter-reset: pub-counter;
+  list-style: none;
+  padding-left: 0;
+}
+ol[type="square"] li {
+  counter-increment: pub-counter;
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+ol[type="square"] li:last-child {
+  border-bottom: none;
+}
+ol[type="square"] li::before {
+  content: counter(pub-counter);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   Accordion (More News)
+   ============================================ */
+.accordion-toggle {
+  cursor: pointer;
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  border: none;
+  background: transparent;
+  width: auto;
+  text-align: left;
+  border-bottom: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.accordion-toggle::after {
+  content: '▾';
+  font-size: 0.85rem;
+  transition: transform var(--transition);
+}
+.accordion-toggle.active::after {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  padding: 0.5rem 0 0;
+}
+
+/* ============================================
+   Experience table
+   ============================================ */
+table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+td {
+  line-height: 1.65;
+  padding: 0.6rem 0;
+  vertical-align: top;
+}
+td img {
+  border-radius: 6px;
+}
+
+/* ============================================
+   Footer spacing
+   ============================================ */
+p {
+  padding: 0.3em 0;
+  line-height: 1.7;
 }
 
 hr {
-  color: #c1e1a6;
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 1.5rem 0;
 }
 
-td {
-	line-height:150%
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 700px) {
+  html {
+    font-size: 15px;
+  }
+  #header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  #profile img {
+    width: 150px;
+  }
+  .social-links {
+    justify-content: center;
+  }
+  .email-line {
+    justify-content: center;
+  }
+  .card {
+    padding: 1.5rem 1.2rem;
+  }
+  ol[type="square"] li {
+    padding-left: 1.8rem;
+  }
 }
 
-ul {
-	line-height:200%
+@media (max-width: 480px) {
+  #wrapper {
+    width: 96%;
+  }
+  #header {
+    padding: 1.5rem 1rem;
+  }
+  .card {
+    padding: 1.2rem 1rem;
+  }
 }
 
-ol {
-	line-height:200%
-}
-
-.box {
-	background-color: white;
-	margin: 0 0 55px;
-	display: flex;
-	
-}
-
-.box-11 {
-	align-items: flex-start;
-}
-
-.box-item {
-	width: 95px;
-	height: 50px;
-	/* line-height: 200px; */
-	vertical-align: middle;
-	/* margin: 5px; */
-	/* background-color: #ffd200; */
-	/* font-size: 100px; */
-	/* color: white; */
-	text-align: left;
-}
-
-.item-tall {
-	width: 600px;
-	height: 50px;
-	line-height: 150%;
-}
-
-div#header {
-	height: 300px;
-	font-family: Helvetica, Verdana, Geneva, Arial, sans-serif;
-	font-size: 12pt;
-	background-color: #ffffff;
-	padding: 2em 0 0 0;
-}
-	
-
-div#contact {
-	float: none;
-	padding: 3em 0 1em 2em;
-    line-height: 120%;
-    font-size: 12pt; 
-}
-
-div#profile {
-	float: left;
-	padding: 10px 50px 0 40px;
-}
-
-div#content {
-	float: none;
-	background-color: #ffffff; 
-	color: #000000;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 12pt;
-  line-height: 120%;
-  padding: 0;
-}
-
-div.section{
-	float: none;
-	margin: 2em;
-}
-
-div.abstract {
-	margin: 1em 0em 0em 1.5em;
-}
-
-div.bib{
-	font-size: 14px;
-	margin: 1em 0em 0em 1.5em;
-}
-
-div.section_title {
-	float: none;
-	background-color: #ffffff; 
-	color: #000000;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 15pt;
-  padding: 0;
-}
-
-.author {
-  color: #5b2503;
-}
-
-.award {
-  font-weight: bold;
-  color: #000000;
-}
-
-
-.accordion-content {
-	display: none;
-	overflow: hidden;
-	padding: 10px;
-}
-
-.accordion-toggle {
-	cursor: pointer;
-	padding: 10px;
-	font-size: 18px;
-	font-weight: bold;
-	color: #333;
-	border: none;
-	background: #f7f7f7;
-	width: 100%;
-	text-align: left;
-	border-bottom: 1px solid #ddd;
+/* ============================================
+   Utility
+   ============================================ */
+.statcounter {
+  display: none;
 }

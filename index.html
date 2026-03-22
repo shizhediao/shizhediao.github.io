@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110065423-1"></script>
-	<!-- <link rel="stylesheet" href="https://cdn.staticfile.net/foundation/5.5.3/css/foundation.min.css"> -->
 	<script src="https://cdn.staticfile.net/foundation/5.5.3/js/foundation.min.js"></script>
 	<script src="https://cdn.staticfile.net/foundation/5.5.3/js/vendor/modernizr.js"></script>
-
-
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
@@ -23,621 +20,408 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'UA-110065423-1');
 	</script>
-	<link href="https://fonts.googleapis.com/css?family=Archivo:600|Noto+Serif|Roboto|Open+Sans" rel="stylesheet">
 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 	<link href="style/my.css" rel="stylesheet" type="text/css" />
 	<title>Shizhe Diao</title>
+
 	<script>
 		function copy(dest, source) {
 			if(dest.source == source) {
 				dest.innerHTML = "";
 				dest.source = null;
-			}
-			else {
+			} else {
 				dest.innerHTML = source.innerHTML;
 				dest.source = source;
 			}
 			dest.blur();
 		}
 	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script> 
-		$(function(){
-			$("#includepubs").load("publication.html"); 
-		});
-	</script>
-
-
 </head>
-
 
 <body>
 
 	<div id="wrapper">
-		<!-- header info -->
+		<!-- Header -->
 		<div id="header">
 			<div id="profile">
-				<img src="figures/me20230102.jpg" height=300 width=200>
+				<img src="figures/me20230102.jpg" alt="Shizhe Diao">
 			</div>
-			<div id="contact">	
-				<br>
-				<strong><font size=5>Shizhe Diao</font size></strong> <br>
-				<br>
-				<!-- <p> -->
-				<!-- <a href="mailto:sdiaoaa@connect.ust.hk" target="_blank">Email <img src="figures/email-logo.jpg" width="2%" style="margin-left: auto; margin-right: auto;"> </a>  &nbsp/&nbsp -->
-				<a href="https://scholar.google.com/citations?user=NDFQrLQAAAAJ&hl=en" target="_blank">Google Scholar <img src="figures/google-scholar-logo.png" width="2.2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp/&nbsp
-				<a href="https://github.com/shizhediao" target="_blank">Github <img src="figures/github-logo.png" width="2.1%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp/&nbsp
-				<a href="https://www.linkedin.com/in/shizhediao/?locale=en_US" target="_blank">LinkedIn <img src="figures/linkedin-logo.jpg" width="2%" style="margin-left: auto; margin-right: auto;"> </a> &nbsp/&nbsp
-				<a href="https://x.com/shizhediao" target="_blank">X <img src="figures/x.png" width="2.6%" style="margin-left: auto; margin-right: auto; position: relative; top: 2px;"> </a> &nbsp
-				  <!-- </p> -->
-				<br>
-				<br>
-				<!-- Email: shizhe.diao AT gmail DOT com -->
-				<p style="display: flex; align-items: center;">
-					Email:
-					<img src="figures/email.png" alt="Email address" style="height: 26px; margin-left: 6px; object-fit: contain;">
-				  </p>
-										</div>
+			<div id="contact">
+				<div class="name">Shizhe Diao</div>
+				<div class="social-links">
+					<a href="https://scholar.google.com/citations?user=NDFQrLQAAAAJ&hl=en" target="_blank"><img src="figures/google-scholar-logo.png" alt="Scholar"> Google Scholar</a>
+					<a href="https://github.com/shizhediao" target="_blank"><img src="figures/github-logo.png" alt="GitHub"> GitHub</a>
+					<a href="https://www.linkedin.com/in/shizhediao/?locale=en_US" target="_blank"><img src="figures/linkedin-logo.jpg" alt="LinkedIn"> LinkedIn</a>
+					<a href="https://x.com/shizhediao" target="_blank"><img src="figures/x.png" alt="X"> X</a>
+				</div>
+				<div class="email-line">
+					Email: <img src="figures/email.png" alt="Email address">
+				</div>
+			</div>
 		</div>
 
 		<div id="content">
-			<div class="section">
+
+			<!-- Bio -->
+			<div class="card">
 				<p>
 					I am a senior research scientist at NVIDIA Research. 
 					I was a visiting scholar at <a href="http://blender.cs.illinois.edu/index.html">University of Illinois at Urbana-Champaign</a>, working with Prof. <a href="http://blender.cs.illinois.edu/hengji.html">Heng Ji</a>.
 					I received my Ph.D. in 2023 advised by Prof. <a href="http://tongzhang-ml.org/">Tong Zhang</a>. 
-					<!-- I received my Master of Philosophy degree at HKUST in 2021. -->
-					<!-- Before joining HKUST, I received my Bachelor of Science degree at Beijing Normal University in 2019.  -->
-					<!-- I was a research intern at ByteDance AI Lab with Dr. <a href="https://scholar.google.com/citations?user=nTl5mSwAAAAJ&hl=en">Hang Li</a> and Dr. <a href="https://scholar.google.com/citations?user=BnSQUocAAAAJ&hl=en">Xinsong Zhang</a>, and at Sinovation Ventures AI Institute. -->
-					<!-- During my undergraduate study, I interned at <a href="http://wing.comp.nus.edu.sg/">WING Group @ NUS</a> and <a href="https://english.pku.edu.cn/">PKU</a>, where I was fortunate to work with Prof. <a href="https://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</a> and Prof. <a href="https://wanxiaojun.github.io/">Xiaojun Wan</a>. -->
 					My research focuses on developing methods to scale up post-training and reinforcement learning for large language models, pushing the frontier of more capable, general-purpose AI agents through data-centric design.
-					<br>
-					<font color=red size=4 face="黑体"><i>We are hiring interns for building efficient and intelligent agentic systems. Please contact me if you are interested.</i></font>			
-				</p>	
-				</div>
+				</p>
+				<div class="hiring">We are hiring interns for building efficient and intelligent agentic systems. Please contact me if you are interested.</div>
+			</div>
 
-		
-		<h3>News</h3>
-				<br />
+			<!-- News -->
+			<div class="card">
+				<h3>News</h3>
 				<ul type="square">
-					<li> Our <a href="https://huggingface.co/datasets/nvidia/ClimbMix">ClimbMix</a> becomes the default pretraining dataset used in Andrej Karpathy’s <a href="https://github.com/karpathy/nanochat">NanoChat speedrun</a>. </li>
-					<li> Four papers got accepted by ICLR 2026! </li>
-					<li> 🔥 <a href="https://arxiv.org/abs/2601.22975">Golden Goose</a>: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text. </li>
-					<li> 🔥 <a href="https://arxiv.org/abs/2601.05242">GDPO</a>: Group reward-Decoupled Normalization Policy Optimization (GDPO), a new multi-reward RL algorithm that consistently improves per-reward convergence over GRPO.</li>
-					<li> 🔥 <a href="https://arxiv.org/abs/2511.21689">ToolOrchestra</a>: An RL-based framework for training small orchestrators to orchestrate large LLMs and tools. Our Orchestrator-8B outperforms GPT-5 on HLE (37.1% vs 35.1%) while being 2.5× faster and 70% cheaper, and ranked <span style="color: red;">#1 on <a href="https://huggingface.co/spaces/gaia-benchmark/leaderboard" style="color: red;">GAIA benchmark</a></span>. <a href="https://research.nvidia.com/labs/lpr/ToolOrchestra/">[Homepage]</a> <a href="https://huggingface.co/nvidia/Nemotron-Orchestrator-8B">[Model]</a> <a href="https://huggingface.co/datasets/nvidia/ToolScale">[Data]</a> <a href="https://github.com/NVlabs/ToolOrchestra">[Code]</a></li>
-					<li> <a href="https://huggingface.co/datasets/nvidia/ProfBench">ProfBench</a>: A professional reasoning benchmark with 7,000+ expert-written rubrics from 38 domain experts across finance, consulting, chemistry, and physics is released! </li>
-					<li> <a href="https://arxiv.org/abs/2510.01180">BroRL: Scaling Reinforcement Learning via Broadened Exploration</a> is released!  </li>
-					<li> <a href="https://arxiv.org/abs/2509.26328">Fast-dLLM v2: Efficient Block-Diffusion LLM</a> is released!  </li>
-					<li> Open-sourced <a href="https://research.nvidia.com/labs/adlr/files/NVIDIA-Nemotron-Nano-2-Technical-Report.pdf">NVIDIA-Nemotron-Nano-v2-9B</a>: our next-generation efficient hybrid model which is 6× faster than Qwen3-8B at reasoning tasks. </li>
-					<li> <a href="https://hijkzzz.notion.site/prorl-v2">ProRL v2</a> is released! </li>
-					<li> 🚨 RL Scaling Alert: Introducing <a href="https://arxiv.org/abs/2505.24864">ProRL</a>, a novel training recipe that scales RL to 2k+ steps, powering the world’s leading 1.5B reasoning model: <a href="https://huggingface.co/nvidia/Nemotron-Research-Reasoning-Qwen-1.5B">Nemotron-Research-Reasoning-Qwen-1.5B</a>.
-					<li> Excited to share <a href="https://arxiv.org/abs/2505.22618">Fast-dLLM</a>: 27.6× Faster Diffusion LLMs with KV Cache & Parallel Decoding.
+					<li> Our <a href="https://huggingface.co/datasets/nvidia/ClimbMix">ClimbMix</a> becomes the default pretraining dataset used in Andrej Karpathy's <a href="https://github.com/karpathy/nanochat">NanoChat speedrun</a>.</li>
+					<li> Four papers got accepted by ICLR 2026!</li>
+					<li> <a href="https://arxiv.org/abs/2601.22975">Golden Goose</a>: A Simple Trick to Synthesize Unlimited RLVR Tasks from Unverifiable Internet Text.</li>
+					<li> <a href="https://arxiv.org/abs/2601.05242">GDPO</a>: Group reward-Decoupled Normalization Policy Optimization (GDPO), a new multi-reward RL algorithm that consistently improves per-reward convergence over GRPO.</li>
+					<li> <a href="https://arxiv.org/abs/2511.21689">ToolOrchestra</a>: An RL-based framework for training small orchestrators to orchestrate large LLMs and tools. Our Orchestrator-8B outperforms GPT-5 on HLE (37.1% vs 35.1%) while being 2.5x faster and 70% cheaper, and ranked <span class="award-item">#1 on <a href="https://huggingface.co/spaces/gaia-benchmark/leaderboard">GAIA benchmark</a></span>. <a href="https://research.nvidia.com/labs/lpr/ToolOrchestra/">[Homepage]</a> <a href="https://huggingface.co/nvidia/Nemotron-Orchestrator-8B">[Model]</a> <a href="https://huggingface.co/datasets/nvidia/ToolScale">[Data]</a> <a href="https://github.com/NVlabs/ToolOrchestra">[Code]</a></li>
+					<li> <a href="https://huggingface.co/datasets/nvidia/ProfBench">ProfBench</a>: A professional reasoning benchmark with 7,000+ expert-written rubrics from 38 domain experts across finance, consulting, chemistry, and physics is released!</li>
+					<li> <a href="https://arxiv.org/abs/2510.01180">BroRL: Scaling Reinforcement Learning via Broadened Exploration</a> is released!</li>
+					<li> <a href="https://arxiv.org/abs/2509.26328">Fast-dLLM v2: Efficient Block-Diffusion LLM</a> is released!</li>
+					<li> Open-sourced <a href="https://research.nvidia.com/labs/adlr/files/NVIDIA-Nemotron-Nano-2-Technical-Report.pdf">NVIDIA-Nemotron-Nano-v2-9B</a>: our next-generation efficient hybrid model which is 6x faster than Qwen3-8B at reasoning tasks.</li>
+					<li> <a href="https://hijkzzz.notion.site/prorl-v2">ProRL v2</a> is released!</li>
+					<li> Introducing <a href="https://arxiv.org/abs/2505.24864">ProRL</a>, a novel training recipe that scales RL to 2k+ steps, powering the world's leading 1.5B reasoning model: <a href="https://huggingface.co/nvidia/Nemotron-Research-Reasoning-Qwen-1.5B">Nemotron-Research-Reasoning-Qwen-1.5B</a>.</li>
+					<li> Excited to share <a href="https://arxiv.org/abs/2505.22618">Fast-dLLM</a>: 27.6x Faster Diffusion LLMs with KV Cache &amp; Parallel Decoding.</li>
 				</ul>
 
-		<h3 class="accordion-toggle">More News</h3>
-		<div class="accordion-content">
-			<ul type="square">
-				<li> Four papers got accepted by NeurIPS 2025! </li>
-				<li> Two papers got accepted by ICML 2025! </li>
-				<li> Excited to share <a href="https://arxiv.org/abs/2504.13161">CLIMB</a> — Clustering-based Iterative Data Mixture Bootstrapping for efficient LLM pre-training and we open-sourced two high-quality datasets: <a href="https://huggingface.co/datasets/nvidia/ClimbLab">ClimbLab</a> (1.2T tokens, 20 domains) and <a href="https://huggingface.co/datasets/nvidia/ClimbMix">ClimbMix</a> (400B tokens, SOTA data blend for LLM pre-training). Visit <a href="https://research.nvidia.com/labs/lpr/climb/">Homepage</a>.
-					<li> Our paper on <a href="https://arxiv.org/abs/2411.13676">Hymba</a> and <a href="https://openreview.net/forum?id=fMbLszVO1H">LongMamba</a> got accepted by ICLR 2025!
-                    <li> A step on small language model. We propose <a href="https://arxiv.org/abs/2411.13676">Hymba</a>, a hybrid-head architecture surpassing all sub-2B public models in performance including Llama-3.2 and Qwen-2.5.
-					<li> A new training method on process reward model has been proposed. Please check out our blog <a href="https://www.arxiv.org/abs/2412.11006">Entropy-Regularized Process Reward Model</a>.
-					<li> One paper got accepted by NeurIPS 2024!
-					<li> Five papers got accepted by EMNLP 2024!
-					<li> Excited to join NVIDIA Research as a research scientist!
-					<li> Excited to share our <a href="https://arxiv.org/abs/2311.09677">R-Tuning</a> got Outstanding Paper award@NAACL 2024, and <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> got Best Demo Paper award@NAACL 2024!
-					<li> One paper was accepted by ACL 2024 System Demonstration Track.
-					<li> Three papers were accepted by ACL 2024 and Findings including <a href="https://arxiv.org/abs/2302.12246">Active-Prompt</a>, <a href="https://arxiv.org/abs/2402.18571">Directional Preference Alignment</a>, and <a href="https://arxiv.org/abs/2311.08364">Prompt Learning using Metaheuristic</a>.
-					<li> <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> got accepted to NAACL 2024 Demo track!
-					<li> <a href="https://arxiv.org/abs/2311.09677">R-Tuning</a> got accepted to NAACL 2024! LLMs could say I Don't Know now! <i>#Alignment for Honesty </i>
-					<li> One paper was accepted by WWW 2024.
-					<li> One paper was accepted by EACL 2024.
-					<li> The <a href="https://arxiv.org/abs/2304.06767">RAFT</a> paper for alignment was accepted by TMLR 2023.
-					<li> Three papers were accepted by EMNLP 2023 and Findings.
-					<li> Visited <a href="http://blender.cs.illinois.edu/index.html">BLENDER LAB@UIUC</a> from August 2023 to January 2024. </li>
-					<li> Attended ICML 2023 at Hawaii.
-					<li> One paper was accepted by ICCV 2023.
-					<li> Two papers were accepted by ACL 2023.
-					<li> Attended ICLR 2023 at Kigali, Rwanda.
-					<li> Attended EMNLP 2022 at Abu Dhabi.
-					<li> <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> is a framework that allows fine-tuning and deploying personalized LLMs with minimal cost and effort. It has accumulated <font color=red size=4 face="黑体">7, 000+</font> stars⭐️ on Github. We envision that LMFlow will enable more creative and diverse applications of LLMs and foster a wider community of LLM enthusiasts!
-					<li> Check out this curated <a href="https://github.com/shizhediao/ChatGPTPapers">paper list</a> about ChatGPT with the goal of helping everyone learn the techniques behind it.
-			</ul>
-		</div>
+				<h3 class="accordion-toggle">More News</h3>
+				<div class="accordion-content">
+					<ul type="square">
+						<li> Four papers got accepted by NeurIPS 2025!</li>
+						<li> Two papers got accepted by ICML 2025!</li>
+						<li> Excited to share <a href="https://arxiv.org/abs/2504.13161">CLIMB</a> &mdash; Clustering-based Iterative Data Mixture Bootstrapping for efficient LLM pre-training and we open-sourced two high-quality datasets: <a href="https://huggingface.co/datasets/nvidia/ClimbLab">ClimbLab</a> (1.2T tokens, 20 domains) and <a href="https://huggingface.co/datasets/nvidia/ClimbMix">ClimbMix</a> (400B tokens, SOTA data blend for LLM pre-training). Visit <a href="https://research.nvidia.com/labs/lpr/climb/">Homepage</a>.</li>
+						<li> Our paper on <a href="https://arxiv.org/abs/2411.13676">Hymba</a> and <a href="https://openreview.net/forum?id=fMbLszVO1H">LongMamba</a> got accepted by ICLR 2025!</li>
+						<li> A step on small language model. We propose <a href="https://arxiv.org/abs/2411.13676">Hymba</a>, a hybrid-head architecture surpassing all sub-2B public models in performance including Llama-3.2 and Qwen-2.5.</li>
+						<li> A new training method on process reward model has been proposed. Please check out our blog <a href="https://www.arxiv.org/abs/2412.11006">Entropy-Regularized Process Reward Model</a>.</li>
+						<li> One paper got accepted by NeurIPS 2024!</li>
+						<li> Five papers got accepted by EMNLP 2024!</li>
+						<li> Excited to join NVIDIA Research as a research scientist!</li>
+						<li> Excited to share our <a href="https://arxiv.org/abs/2311.09677">R-Tuning</a> got Outstanding Paper award@NAACL 2024, and <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> got Best Demo Paper award@NAACL 2024!</li>
+						<li> One paper was accepted by ACL 2024 System Demonstration Track.</li>
+						<li> Three papers were accepted by ACL 2024 and Findings including <a href="https://arxiv.org/abs/2302.12246">Active-Prompt</a>, <a href="https://arxiv.org/abs/2402.18571">Directional Preference Alignment</a>, and <a href="https://arxiv.org/abs/2311.08364">Prompt Learning using Metaheuristic</a>.</li>
+						<li> <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> got accepted to NAACL 2024 Demo track!</li>
+						<li> <a href="https://arxiv.org/abs/2311.09677">R-Tuning</a> got accepted to NAACL 2024! LLMs could say I Don't Know now! <i>#Alignment for Honesty</i></li>
+						<li> One paper was accepted by WWW 2024.</li>
+						<li> One paper was accepted by EACL 2024.</li>
+						<li> The <a href="https://arxiv.org/abs/2304.06767">RAFT</a> paper for alignment was accepted by TMLR 2023.</li>
+						<li> Three papers were accepted by EMNLP 2023 and Findings.</li>
+						<li> Visited <a href="http://blender.cs.illinois.edu/index.html">BLENDER LAB@UIUC</a> from August 2023 to January 2024.</li>
+						<li> Attended ICML 2023 at Hawaii.</li>
+						<li> One paper was accepted by ICCV 2023.</li>
+						<li> Two papers were accepted by ACL 2023.</li>
+						<li> Attended ICLR 2023 at Kigali, Rwanda.</li>
+						<li> Attended EMNLP 2022 at Abu Dhabi.</li>
+						<li> <a href="https://github.com/OptimalScale/LMFlow">LMFlow</a> is a framework that allows fine-tuning and deploying personalized LLMs with minimal cost and effort. It has accumulated <strong class="award-item">7,000+</strong> stars on Github. We envision that LMFlow will enable more creative and diverse applications of LLMs and foster a wider community of LLM enthusiasts!</li>
+						<li> Check out this curated <a href="https://github.com/shizhediao/ChatGPTPapers">paper list</a> about ChatGPT with the goal of helping everyone learn the techniques behind it.</li>
+					</ul>
+				</div>
+			</div>
 
-		<!-- Education -->
-		<!-- <br />
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-			<tbody>
-				<tr>
-				<h3>Education</h3>
-				<br />
-				<table>
-					<tbody>
+			<!-- Publications -->
+			<div class="card">
+				<h3>Selected Publications (<a href="https://scholar.google.com/citations?user=NDFQrLQAAAAJ&hl=en">Full List</a>)</h3>
 
-					<tr>
-						<td width="90%">
-							<div class="box box-11">
-								<div class="box-item"><strong>Ph.D.</strong></div>
-								<div class="box-item item-tall">Sept. 2021 - Present <br> 
-									The Hong Kong University of Science and Technology (HKUST), HKSAR<br>
-									Ph.D. student in Computer Science <br>
-									Advisor: Prof. <a href="http://tongzhang-ml.org/">Tong Zhang</a> <br>
-								</div>
-							</div>
-						</td>
-						<td width="10%">
-							<img src="figures/hkust.png" width="50%" style="display: block; margin-left: auto; margin-right: auto;">
-						</td>
-					</tr>
+				<ol type="square">
 
-					<tr>
-						<td width="90%">
-							<div class="box box-11">
-								<div class="box-item"><strong>M.Phil.</strong></div>
-								<div class="box-item item-tall">Sept. 2019 - Jun. 2021 <br> 
-									The Hong Kong University of Science and Technology (HKUST), HKSAR<br>
-									M.Phil. student in Computer Science <br>
-									Advisor: Prof. <a href="http://tongzhang-ml.org/">Tong Zhang</a> <br>
-								</div>
-							</div>
-						</td>
-						<td width="10%">
-							<img src="figures/hkust.png" width="50%" style="display: block; margin-left: auto; margin-right: auto;">
-						</td>
-					</tr>
+					<li>Zhilin Wang, Jaehun Jung, Ximing Lu, <u><strong>Shizhe Diao</strong></u>, Ellie Evans, Jiaqi Zeng, Pavlo Molchanov, Yejin Choi, Jan Kautz, Yi Dong
+						<br /> <a href="https://arxiv.org/abs/2510.18941">ProfBench: Multi-Domain Rubrics requiring Professional Knowledge to Answer and Judge</a> <span class="badge-new">NEW</span>
+						<br /> <span class="badge-venue">ICLR 2026</span></li>
 
-					<tr>
-						<td width="90%">
-							<div class="box box-11">
-								<div class="box-item"><strong>B.S.</strong></div>
-								<div class="box-item item-tall">Sept. 2015 - Jun. 2019 <br> 
-									Beijing Normal University (BNU), China<br>
-									B.S. in Computer Science <br>
-								</div>
-							</div>
-						</td>
-						<td width="10%">
-							<img src="figures/bnu.jpeg" width="90%" style="display: block; margin-left: auto; margin-right: auto;">
-						</td>
-					</tr>
+					<li><u><strong>Shizhe Diao</strong></u>, Yu Yang, Yonggan Fu, Xin Dong, Dan SU, Markus Kliegl, Zijia Chen, Peter Belcak, Yoshi Suhara, Hongxu Yin, Mostofa Patwary, Yingyan Celine Lin, Jan Kautz, Pavlo Molchanov
+						<br /> <a href="https://arxiv.org/abs/2504.13161">Nemotron-CLIMB: Clustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training</a>
+						<br /> <span class="badge-venue">NeurIPS 2025 Datasets and Benchmarks Track</span></li>
 
-					</tbody>
-				</table>
-				</tr>
-			</tbody>
-		</table> -->
-			<br />
-			<h3>Selected Publications (<a href="https://scholar.google.com/citations?user=NDFQrLQAAAAJ&hl=en">Full List</a>)</h3>
-			<br />
+					<li>Mingjie Liu, <u><strong>Shizhe Diao</strong></u>, Ximing Lu, Jian Hu, Xin Dong, Yejin Choi, Jan Kautz, Yi Dong
+						<br /> <a href="https://arxiv.org/abs/2505.24864">ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models</a>
+						<br /> <span class="badge-venue">NeurIPS 2025</span></li>
 
-			<ol type="square">
+					<li>Yonggan Fu, Xin Dong, <u><strong>Shizhe Diao</strong></u>, Matthijs Van keirsbilck, Hanrong Ye, Wonmin Byeon, Yashaswi Karnati, Lucas Liebenwein, Maksim Khadkevich, Alexander Keller, Jan Kautz, Yingyan Celine Lin, Pavlo Molchanov
+						<br /> <a href="https://arxiv.org/abs/2511.18890">Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models</a>
+						<br /> <span class="badge-venue">NeurIPS 2025</span></li>
 
-				<!-- <li>Chengyue Wu, Hao Zhang, Shuchen Xue, Zhijian Liu, <u><strong>Shizhe Diao</strong></u>, Ligeng Zhu, Ping Luo, Song Han, Enze Xie
-					<br /> <a href="https://arxiv.org/abs/2505.22618">Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding </a> <font color=red size=4 face="黑体"><i>[NEW]</i></font>
-					<br /> ICLR 2026</li>
+					<li>Xin Xu, Qiyun Xu, Tong Xiao, Tianhao Chen, Yuchen Yan, Jiaxin Zhang, <u><strong>Shizhe Diao</strong></u>, Can Yang, Yang Wang
+						<br /> <a href="https://arxiv.org/abs/2502.00334">UGPhysics: A Comprehensive Benchmark for Undergraduate Physics Reasoning with Large Language Models</a>
+						<br /> <span class="badge-venue">ICML 2025</span></li>
 
-				<li>Chengyue Wu, Hao Zhang, Shuchen Xue, <u><strong>Shizhe Diao</strong></u>, Yonggan Fu, Zhijian Liu, Pavlo Molchanov, Ping Luo, Song Han, Enze Xie
-					<br /> <a href="https://arxiv.org/abs/2509.26328">Fast-dLLM v2: Efficient Block-Diffusion LLM </a> <font color=red size=4 face="黑体"><i>[NEW]</i></font>
-					<br /> ICLR 2026</li> -->
+					<li>Hanning Zhang, Pengcheng Wang, <u><strong>Shizhe Diao</strong></u>, Yong Lin, Rui Pan, Hanze Dong, Dylan Zhang, Pavlo Molchanov, Tong Zhang
+						<br /> <a href="https://www.arxiv.org/abs/2412.11006">Entropy-Regularized Process Reward Model</a>
+						<br /> <span class="badge-venue">TMLR 2025</span></li>
 
-				<!-- <li>Ruida Wang, Jiarui Yao, Rui Pan, <u><strong>Shizhe Diao</strong></u>, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2510.11769">GAR: Generative Adversarial Reinforcement Learning for Formal Theorem Proving </a> <font color=red size=4 face="黑体"><i>[NEW]</i></font>
-					<br /> ICLR 2026</li> -->
+					<li>Xin Xu, <u><strong>Shizhe Diao</strong></u>, Can Yang, Yang Wang
+						<br /> <a href="https://arxiv.org/abs/2402.10528">Can We Verify Step by Step for Incorrect Answer Detection?</a>
+						<br /> <span class="badge-venue">IJCAI 2025</span></li>
 
-				<li>Zhilin Wang, Jaehun Jung, Ximing Lu, <u><strong>Shizhe Diao</strong></u>, Ellie Evans, Jiaqi Zeng, Pavlo Molchanov, Yejin Choi, Jan Kautz, Yi Dong
-					<br /> <a href="https://arxiv.org/abs/2510.18941">ProfBench: Multi-Domain Rubrics requiring Professional Knowledge to Answer and Judge </a> <font color=red size=4 face="黑体"><i>[NEW]</i></font>
-					<br /> ICLR 2026</li>
+					<li>Xin Dong, Yonggan Fu, <u><strong>Shizhe Diao</strong></u>, Wonmin Byeon, Zijia Chen, Ameya Sunil Mahabaleshwarkar, Shih-Yang Liu, Matthijs Van Keirsbilck, Min-Hung Chen, Yoshi Suhara, Yingyan Lin, Jan Kautz, Pavlo Molchanov
+						<br /> <a href="https://arxiv.org/abs/2411.13676">Hymba: A Hybrid-head Architecture for Small Language Models</a>
+						<br /> <span class="badge-venue">ICLR 2025</span></li>
 
-				<li><u><strong>Shizhe Diao</strong></u>, Yu Yang, Yonggan Fu, Xin Dong, Dan SU, Markus Kliegl, Zijia Chen, Peter Belcak, Yoshi Suhara, Hongxu Yin, Mostofa Patwary, Yingyan Celine Lin, Jan Kautz, Pavlo Molchanov
-					<br /> <a href="https://arxiv.org/abs/2504.13161">Nemotron-CLIMB: Clustering-based Iterative Data Mixture Bootstrapping for Language Model Pre-training </a> 
-					<br /> NeurIPS 2025 Datasets and Benchmarks Track</li>
+					<li>Rui Pan, Xiang Liu, <u><strong>Shizhe Diao</strong></u>, Renjie Pi, Jipeng Zhang, Chi Han, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2403.17919">LISA: Layerwise Importance Sampling for Memory-Efficient Large Language Model Fine-Tuning</a>
+						<br /> <span class="badge-venue">NeurIPS 2024</span></li>
 
-				<li>Mingjie Liu, <u><strong>Shizhe Diao</strong></u>, Ximing Lu, Jian Hu, Xin Dong, Yejin Choi, Jan Kautz, Yi Dong 
-					<br /> <a href="https://arxiv.org/abs/2505.24864">ProRL: Prolonged Reinforcement Learning Expands Reasoning Boundaries in Large Language Models</a> 
-					<br /> NeurIPS 2025 </li>
+					<li>Tianyang Xu, Shujin Wu, <u><strong>Shizhe Diao</strong></u>, Xiaoze Liu, Xingyao Wang, Yangyi Chen, Jing Gao
+						<br /> <a href="https://arxiv.org/abs/2405.20974">SaySelf: Teaching LLMs to Express Confidence with Self-Reflective Rationales</a>
+						<br /> <span class="badge-venue">EMNLP 2024</span></li>
 
-				<li>Yonggan Fu, Xin Dong, <u><strong>Shizhe Diao</strong></u>, Matthijs Van keirsbilck, Hanrong Ye, Wonmin Byeon, Yashaswi Karnati, Lucas Liebenwein, Maksim Khadkevich, Alexander Keller, Jan Kautz, Yingyan Celine Lin, Pavlo Molchanov 
-					<br /> <a href="https://arxiv.org/abs/2511.18890">Nemotron-Flash: Towards Latency-Optimal Hybrid Small Language Models </a> 
-					<br /> NeurIPS 2025 </li>
+					<li>Yong Lin, Hangyu Lin, Wei Xiong, <u><strong>Shizhe Diao</strong></u>, Jianmeng Liu, Jipeng Zhang, Rui Pan, Haoxiang Wang, Wenbin Hu, Hanning Zhang, Hanze Dong, Renjie Pi, Han Zhao, Nan Jiang, Heng Ji, Yuan Yao, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2309.06256">Mitigating the Alignment Tax of RLHF</a>
+						<br /> <span class="badge-venue">EMNLP 2024</span></li>
 
-				<!-- <li>Tianhao Chen, Xin Xu, Zijing Liu, Pengxiang Li, Xinyuan Song, Ajay Kumar Jaiswal, Fan Zhang, Jishan Hu, Yang Wang, Hao Chen, <u><strong>Shizhe Diao</strong></u>, Shiwei Liu, Yu Li, Lu Yin, Can Yang 
-					<br /> <a href="https://arxiv.org/abs/2506.22049">GPAS: Accelerating Convergence of LLM Pretraining via Gradient-Preserving Activation Scaling</a> 
-					<br /> NeurIPS 2025 </li>
-				 -->
-				<!-- <li>Ruida Wang, Rui Pan, Yuxin Li, Jipeng Zhang, Yizhen Jia, <u><strong>Shizhe Diao</strong></u>, Renjie Pi, Junjie Hu, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2503.03205">MA-LoT: Model-Collaboration Lean-based Long Chain-of-Thought Reasoning enhances Formal Theorem Proving					</a> 
-					<br /> ICML 2025 </li> -->
+					<li>Ruida Wang, Jipeng Zhang, Yizhen Jia, Rui Pan, <u><strong>Shizhe Diao</strong></u>, Renjie Pi, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2407.03203">TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts</a>
+						<br /> <span class="badge-venue">EMNLP 2024</span></li>
 
-				<li>Xin Xu, Qiyun Xu, Tong Xiao, Tianhao Chen, Yuchen Yan, Jiaxin Zhang, <u><strong>Shizhe Diao</strong></u>, Can Yang, Yang Wang
-					<br /> <a href="https://arxiv.org/abs/2502.00334">UGPhysics: A Comprehensive Benchmark for Undergraduate Physics Reasoning with Large Language Models</a> 
-					<br /> ICML 2025 </li>
+					<li><u><strong>Shizhe Diao</strong></u>, Pengcheng Wang, Yong Lin, Tong Zhang.
+						<br /> <a href="https://arxiv.org/abs/2302.12246">Active Prompting with Chain-of-Thought for Large Language Models</a>
+						<br /> <span class="badge-venue">ACL 2024</span></li>
 
-				<li>Hanning Zhang, Pengcheng Wang, <u><strong>Shizhe Diao</strong></u>, Yong Lin, Rui Pan, Hanze Dong, Dylan Zhang, Pavlo Molchanov, Tong Zhang
-					<br /> <a href="https://www.arxiv.org/abs/2412.11006">Entropy-Regularized Process Reward Model</a>  
-					<br /> TMLR 2025 </li>
+					<li>Haoxiang Wang, Yong Lin, Wei Xiong, Rui Yang, <u><strong>Shizhe Diao</strong></u>, Shuang Qiu, Han Zhao, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2402.18571">Arithmetic Control of LLMs for Diverse User Preferences: Directional Preference Alignment with Multi-Objective Rewards</a>
+						<br /> <span class="badge-venue">ACL 2024</span></li>
 
-				<li>Xin Xu, <u><strong>Shizhe Diao</strong></u>, Can Yang, Yang Wang
-					<br /> <a href="https://arxiv.org/abs/2402.10528">Can We Verify Step by Step for Incorrect Answer Detection?	</a>  
-					<br /> IJCAI 2025 </li>
+					<li>Rui Pan*, Shuo Xing*, <u><strong>Shizhe Diao*</strong></u>, Wenhe Sun*, Xiang Liu, Kashun Shum, Renjie Pi, Jipeng Zhang, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2311.08364">Plum: Prompt Learning using Metaheuristic</a>
+						<br /> <span class="badge-venue">Findings of ACL 2024</span></li>
 
-				<li>Xin Dong, Yonggan Fu, <u><strong>Shizhe Diao</strong></u>,, Wonmin Byeon, Zijia Chen, Ameya Sunil Mahabaleshwarkar, Shih-Yang Liu, Matthijs Van Keirsbilck, Min-Hung Chen, Yoshi Suhara, Yingyan Lin, Jan Kautz, Pavlo Molchanov
-					<br /> <a href="https://arxiv.org/abs/2411.13676">Hymba: A Hybrid-head Architecture for Small Language Models </a> 
-					<br /> ICLR 2025 </li>
-<!-- 				
-				<li>Zhifan Ye, Kejing Xia, Yonggan Fu, Xin Dong, Jihoon Hong, Xiangchi Yuan, <u><strong>Shizhe Diao</strong></u>, Jan Kautz, Pavlo Molchanov, Yingyan Celine Lin
-					<br /> <a href="https://openreview.net/forum?id=fMbLszVO1H">LongMamba: Enhancing Mamba's Long-Context Capabilities via Training-Free Receptive Field Enlargement	</a>  
-					<br /> ICLR 2025 </li> -->
+					<li><u><strong>Shizhe Diao*</strong></u>, Rui Pan*, Hanze Dong*, Ka Shun Shum, Jipeng Zhang, Wei Xiong, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2306.12420">LMFlow: An Extensible Toolkit for Finetuning and Inference of Large Foundation Models</a>
+						<br /> <span class="badge-venue">NAACL 2024 Demo Track</span> <span class="badge-award">Best Demo Paper</span></li>
 
-				<li>Rui Pan, Xiang Liu, <u><strong>Shizhe Diao</strong></u>, Renjie Pi, Jipeng Zhang, Chi Han, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2403.17919">LISA: Layerwise Importance Sampling for Memory-Efficient Large Language Model Fine-Tuning	</a>
-					<br /> NeurIPS 2024 </li>
-					
-				<li>Tianyang Xu, Shujin Wu, <u><strong>Shizhe Diao</strong></u>, Xiaoze Liu, Xingyao Wang, Yangyi Chen, Jing Gao
-					<br /> <a href="https://arxiv.org/abs/2405.20974">SaySelf: Teaching LLMs to Express Confidence with Self-Reflective Rationales	</a> 
-					<br /> EMNLP 2024 </li>
+					<li>Hanning Zhang*, <u><strong>Shizhe Diao*</strong></u>, Yong Lin*, Yi R. Fung, Qing Lian, Xingyao Wang, Yangyi Chen, Heng Ji, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2311.09677">R-Tuning: Instructing Large Language Models to Say `I Don't Know'</a>
+						<br /> <span class="badge-venue">NAACL 2024</span> <span class="badge-award">Outstanding Paper</span></li>
 
-				<li>Yong Lin, Hangyu Lin, Wei Xiong, <u><strong>Shizhe Diao</strong></u>, Jianmeng Liu, Jipeng Zhang, Rui Pan, Haoxiang Wang, Wenbin Hu, Hanning Zhang, Hanze Dong, Renjie Pi, Han Zhao, Nan Jiang, Heng Ji, Yuan Yao, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2309.06256">Mitigating the Alignment Tax of RLHF </a>  
-					<br /> EMNLP 2024 </li>
+					<li>Xu Liu, Junfeng Hu, Yuan Li, <u><strong>Shizhe Diao</strong></u>, Yuxuan Liang, Bryan Hooi, Roger Zimmermann
+						<br /> <a href="https://arxiv.org/abs/2310.09751">UniTime: A Language-Empowered Unified Model for Cross-Domain Time Series Forecasting</a>
+						<br /> <span class="badge-venue">WWW 2024</span></li>
 
-				<!-- <li>KaShun Shum, Minrui Xu, Jianshu Zhang, Zixin Chen, <u><strong>Shizhe Diao</strong></u>, Hanze Dong, Jipeng Zhang, Muhammad Omer Raza
-					<br /> <a href="https://arxiv.org/abs/2408.12168">FIRST: Teach A Reliable Large Language Model Through Efficient Trustworthy Distillation	</a> 
-					<br /> EMNLP 2024 </li> -->
+					<li>Hanze Dong*, Wei Xiong*, Deepanshu Goyal, Rui Pan, <u><strong>Shizhe Diao</strong></u>, Jipeng Zhang, Kashun Shum, Tong Zhang.
+						<br /> <a href="https://arxiv.org/abs/2304.06767">RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment</a>
+						<br /> <span class="badge-venue">TMLR</span></li>
 
-				<li>Ruida Wang, Jipeng Zhang, Yizhen Jia, Rui Pan, <u><strong>Shizhe Diao</strong></u>, Renjie Pi, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2407.03203">TheoremLlama: Transforming General-Purpose LLMs into Lean4 Experts </a>
-					<br /> EMNLP 2024 </li>
-				
-				<!-- <li>Tianyang Han, Qing Lian, Rui Pan, Renjie Pi, Jipeng Zhang, <u><strong>Shizhe Diao</strong></u>, Yong Lin, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2402.03757">The Instinctive Bias: Spurious Images lead to Hallucination in MLLMs	</a> 
-					<br /> EMNLP 2024 </li> -->
+					<li>Kashun Shum*, <u><strong>Shizhe Diao*</strong></u>, Tong Zhang.
+						<br /> <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a>
+						<br /> <span class="badge-venue">Findings of EMNLP 2023</span></li>
 
-				<!-- <li>Cheng Niu, Yang Guan, Yuanhao Wu, Juno Zhu, Juntong Song, Randy Zhong, Kaihua Zhu, Siliang Xu, <u><strong>Shizhe Diao</strong></u>, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2406.10289">VeraCT Scan: Retrieval-Augmented Fake News Detection with Justifiable Reasoning</a> 
-					<br /> ACL 2024 System Demonstration Track </li> -->
+					<li>Renjie Pi*, Jiahui Gao*, <u><strong>Shizhe Diao*</strong></u>, Rui Pan, Hanze Dong, Jipeng Zhang, Lewei Yao, Jianhua Han, Hang Xu, Lingpeng Kong, Tong Zhang
+						<br /> <a href="https://arxiv.org/abs/2305.14167">DetGPT: Detect What You Need via Reasoning</a>
+						<br /> <span class="badge-venue">EMNLP 2023</span></li>
 
-				<li><u><strong>Shizhe Diao</strong></u>, Pengcheng Wang, Yong Lin, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2302.12246">Active Prompting with Chain-of-Thought for Large Language Models</a> 
-					<br /> ACL 2024 </li>
+					<li><u><strong>Shizhe Diao*</strong></u>, Yongyu Lei*, Liangming Pan, Tianqing Fang, Wangchunshu Zhou, Sedrick Scott Keh, Min-Yen Kan, Tong Zhang.
+						<br /> <a href="https://aclanthology.org/2023.emnlp-main.809">Doolittle: Benchmarks and Corpora for Academic Writing Formalization</a>
+						<br /> <span class="badge-venue">EMNLP 2023</span></li>
 
-				<li>Haoxiang Wang, Yong Lin, Wei Xiong, Rui Yang, <u><strong>Shizhe Diao</strong></u>, Shuang Qiu, Han Zhao, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2402.18571">Arithmetic Control of LLMs for Diverse User Preferences: Directional Preference Alignment with Multi-Objective Rewards	</a> 
-					<br /> ACL 2024 </li>
+					<li>Zhihong Chen*, <u><strong>Shizhe Diao*</strong></u>, Benyou Wang, Guanbin Li, Xiang Wan.
+						<br /> <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts</a>
+						<br /> <span class="badge-venue">ICCV 2023</span></li>
 
-				<li>Rui Pan*, Shuo Xing*, <u><strong>Shizhe Diao*</strong></u>, Wenhe Sun*, Xiang Liu, Kashun Shum, Renjie Pi, Jipeng Zhang, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2311.08364">Plum: Prompt Learning using Metaheuristic	</a> 
-					<br /> Findings of ACL 2024 </li>
+					<li><u><strong>Shizhe Diao*</strong></u>, Tianyang Xu*, Ruijia Xu, Jiawei Wang, Tong Zhang.
+						<br /> <a href="https://arxiv.org/abs/2306.05406">Mixture-of-Domain-Adapters: Decoupling and Injecting Domain Knowledge to Pre-trained Language Models' Memories</a>
+						<br /> <span class="badge-venue">ACL 2023</span></li>
 
-				<li><u><strong>Shizhe Diao*</strong></u>, Rui Pan*, Hanze Dong*, Ka Shun Shum, Jipeng Zhang, Wei Xiong, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2306.12420">LMFlow: An Extensible Toolkit for Finetuning and Inference of Large Foundation Models</a>
-					<br /> NAACL 2024 Demo Track <font color=red size=4 face="黑体"><i>(Best Demo Paper)</i></font> </li> 
+					<li>Zhihong Chen, Guiming Hardy Chen, <u><strong>Shizhe Diao</strong></u>, Xiang Wan, Benyou Wang.
+						<br /> <a href="https://arxiv.org/abs/2306.03678">On the Difference of BERT-style and CLIP-style Text Encoders</a>
+						<br /> <span class="badge-venue">Findings of ACL 2023</span></li>
 
-				<li>Hanning Zhang*, <u><strong>Shizhe Diao*</strong></u>, Yong Lin*, Yi R. Fung, Qing Lian, Xingyao Wang, Yangyi Chen, Heng Ji, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2311.09677">R-Tuning: Instructing Large Language Models to Say `I Don't Know'	</a>
-					<br /> NAACL 2024 <font color=red size=4 face="黑体"><i>(Outstanding Paper)</i></font> </li>  
+					<li><u><strong>Shizhe Diao</strong></u>, Wangchunshu Zhou, Xinsong Zhang, Jiawei Wang.
+						<br /> <a href="https://arxiv.org/abs/2206.07699">Write and Paint: Generative Vision-Language Models are Unified Modal Learners</a>
+						<br /> <span class="badge-venue">ICLR 2023</span></li>
 
-				<li>Xu Liu, Junfeng Hu, Yuan Li, <u><strong>Shizhe Diao</strong></u>, Yuxuan Liang, Bryan Hooi, Roger Zimmermann
-					<br /> <a href="https://arxiv.org/abs/2310.09751">UniTime: A Language-Empowered Unified Model for Cross-Domain Time Series Forecasting</a>
-					<br /> WWW 2024 </li>  
+					<li><u><strong>Shizhe Diao</strong></u>, Zhichao Huang, Ruijia Xu, Xuechun Li, Yong Lin, Xiao Zhou, Tong Zhang.
+						<br /> <a href="https://arxiv.org/abs/2201.08531">Black-box Prompt Learning for Pre-trained Language Models</a>
+						<br /> <span class="badge-venue">TMLR</span></li>
 
-				<!-- <li>Quyet V. Do, Tianqing Fang, <u><strong>Shizhe Diao</strong></u>, Zhaowei Wang, Yangqiu Song.
-					<br /> <a href="https://arxiv.org/abs/2401.14003">ConstraintChecker: A Plugin for Large Language Models to Reason on Commonsense Knowledge Bases</a>
-					<br /> EACL 2024 </li>   -->
+					<li><u><strong>Shizhe Diao*</strong></u>, Sedrick Scott Keh*, Liangming Pan, Zhiliang Tian, Yan Song, Tong Zhang.
+						<br /> <a href="https://arxiv.org/abs/2302.10143">Hashtag-Guided Low-Resource Tweet Classification</a>
+						<br /> <span class="badge-venue">WWW 2023</span></li>
 
-				<li>Hanze Dong*, Wei Xiong*, Deepanshu Goyal, Rui Pan, <u><strong>Shizhe Diao</strong></u>, Jipeng Zhang, Kashun Shum, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2304.06767">RAFT: Reward rAnked FineTuning for Generative Foundation Model Alignment</a> 
-					<br /> TMLR </li>  
+					<li>Wangchunshu Zhou*, Yan Zeng*, <u><strong>Shizhe Diao*</strong></u>, Xinsong Zhang*.
+						<br /> <a href="https://arxiv.org/abs/2205.15237">VLUE: A Multi-Task Benchmark for Evaluating Vision-Language Models</a>
+						<br /> <span class="badge-venue">ICML 2022</span></li>
 
-				<li>Kashun Shum*, <u><strong>Shizhe Diao*</strong></u>, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a>
-					<br /> Findings of EMNLP 2023</li> 
-				
-				<li>Renjie Pi*, Jiahui Gao*, <u><strong>Shizhe Diao*</strong></u>, Rui Pan, Hanze Dong, Jipeng Zhang, Lewei Yao, Jianhua Han, Hang Xu, Lingpeng Kong, Tong Zhang
-					<br /> <a href="https://arxiv.org/abs/2305.14167">DetGPT: Detect What You Need via Reasoning</a>
-					<br /> EMNLP 2023</li>  
+					<li>Xiao Zhou, Weizhong Zhang, Zonghao Chen, <u><strong>Shizhe Diao</strong></u>, Tong Zhang.
+						<br /> <a href="https://arxiv.org/pdf/2111.05685.pdf">Efficient Neural Network Training via Forward and Backward Propagation Sparsification</a>
+						<br /> <span class="badge-venue">NeurIPS 2021</span></li>
 
-				<li><u><strong>Shizhe Diao*</strong></u>, Yongyu Lei*, Liangming Pan, Tianqing Fang, Wangchunshu Zhou, Sedrick Scott Keh, Min-Yen Kan, Tong Zhang.
-					<br /> <a href="https://aclanthology.org/2023.emnlp-main.809">Doolittle: Benchmarks and Corpora for Academic Writing Formalization</a>
-					<br /> EMNLP 2023 </li> 
-							
-				<li>Zhihong Chen*, <u><strong>Shizhe Diao*</strong></u>, Benyou Wang, Guanbin Li, Xiang Wan.
-					<br /> <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts</a>
-					<br /> ICCV 2023</li> 
+					<li><u><strong>Shizhe Diao</strong></u>, Ruijia Xu, Hongjin Su, Yilei Jiang, Yan Song, Tong Zhang.
+						<br /> <a href="https://aclanthology.org/2021.acl-long.259.pdf">Taming Pre-trained Language Models with N-gram Representations for Low-Resource Domain Adaptation</a>
+						<br /> <span class="badge-venue">ACL 2021</span></li>
 
-				<li><u><strong>Shizhe Diao*</strong></u>, Tianyang Xu*, Ruijia Xu, Jiawei Wang, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2306.05406">Mixture-of-Domain-Adapters: Decoupling and Injecting Domain Knowledge to Pre-trained Language Models' Memories</a>
-					<br /> ACL 2023</li> 
+					<li><u><strong>Shizhe Diao*</strong></u>, Xinwei Shen*, KaShun SHUM, Yan Song, Tong Zhang.
+						<br /> <a href="https://aclanthology.org/2021.findings-acl.428.pdf">TILGAN: Transformer-based Implicit Latent GAN for Diverse and Coherent Text Generation</a>
+						<br /> <span class="badge-venue">Findings of ACL 2021</span></li>
 
-				<li>  Zhihong Chen, Guiming Hardy Chen, <u><strong>Shizhe Diao</strong></u>, Xiang Wan, Benyou Wang.
-					<br /> <a href="https://arxiv.org/abs/2306.03678">On the Difference of BERT-style and CLIP-style Text Encoders</a>
-					<br /> Findings of ACL 2023</li> 
+					<li><u><strong>Shizhe Diao</strong></u>, Jiaxin Bai, Yan Song, Tong Zhang, and Yonggang Wang.
+						<br /> <a href="https://aclanthology.org/2020.findings-emnlp.425.pdf">ZEN: Pre-training Chinese Text Encoder Enhanced by N-gram Representations</a>
+						<br /> <span class="badge-venue">Findings of EMNLP 2020</span></li>
+				</ol>
+			</div>
 
-				<li><u><strong>Shizhe Diao</strong></u>, Wangchunshu Zhou, Xinsong Zhang, Jiawei Wang.
-					<br /> <a href="https://arxiv.org/abs/2206.07699">Write and Paint: Generative Vision-Language Models are Unified Modal Learners</a>
-					<br /> ICLR 2023</li> 
+			<!-- Talks -->
+			<div class="card">
+				<h3>Recent Talks</h3>
+				<ul type="square">
+					<li> [2024/11] Invited Lecture @ University of Michigan, Ann Arbor, <a href="https://cse595-umich.notion.site/Fall-2024-CSE-595-Natural-Language-Processing-University-of-Michigan-cf5a2e369ff94d4dafac676e1681ca26">CSE 595: Natural Language Processing</a>. Sharing hybrid small language models hosted by <a href="https://web.eecs.umich.edu/~chaijy/">Prof. Joyce Y. Chai</a></li>
+					<li> [2023/10] Invited Lecture @ University of Toronto, graduate NLP course (CSC401/2511). Hosted by <a href="https://www.cs.toronto.edu/~ealee/public/">Prof. Annie Lee</a></li>
+					<li> [2023/08] Invited Talk @ <a href="https://labhku.github.io/">CVMI Lab, The University of Hong Kong</a>. Hosted by <a href="https://xjqi.github.io/">Prof. Xiaojuan Qi</a></li>
+					<li> [2023/06] Invited Talk @ University of Toronto. Hosted by <a href="https://sites.google.com/view/qsun">Prof. Qiang Sun</a></li>
+					<li> [2023/06] Invited Talk @ Shanghai AI Lab <a href="https://www.bilibili.com/video/BV1Pz4y1q7yA">[Recording]</a></li>
+					<li> [2023/05] Invited Talk @ Stanford University. Hosted by <a href="https://stanford.edu/~pilanci/">Prof. Mert Pilanci</a></li>
+				</ul>
+			</div>
 
-				<li><u><strong>Shizhe Diao</strong></u>, Zhichao Huang, Ruijia Xu, Xuechun Li, Yong Lin, Xiao Zhou, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2201.08531">Black-box Prompt Learning for Pre-trained Language Models</a>
-					<br /> TMLR </li>
+			<!-- Awards -->
+			<div class="card">
+				<h3>Honors and Awards</h3>
+				<ul type="square">
+					<li> <span class="badge-award">Best Demo Paper at NAACL 2024</span></li>
+					<li> <span class="badge-award">Outstanding Paper Award at NAACL 2024</span></li>
+					<li> First Runner-up, School of Engineering PhD Research Excellence Award 2024, HKUST</li>
+					<li> HKUST Overseas Research Award, 2023</li>
+					<li> HKUST RedBird PhD Scholarship, 2021</li>
+					<li> Hong Kong PhD Fellowship, 2021-2024</li>
+					<li> EMNLP 2020, SIGIR 2020, ACL 2020 Student Volunteer, 2020</li>
+					<li> Merit Student of Beijing, 2019</li>
+					<li> Outstanding Graduate Student of Beijing, 2019</li>
+					<li> Top 10 Talent Nomination Award (Only 20 in ~2000), 2018</li>
+					<li> Meritorious Winner, Interdisciplinary Contest in Modeling (ICM), 2018</li>
+					<li> <a href="docs/certificate.pdf">Runner-up, World Robot Olympiad (WRO), New Delhi, India, 2016</a></li>
+				</ul>
+			</div>
 
-				<li><u><strong>Shizhe Diao*</strong></u>, Sedrick Scott Keh*, Liangming Pan, Zhiliang Tian, Yan Song, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2302.10143">Hashtag-Guided Low-Resource Tweet Classification</a> 
-					<br /> WWW 2023</li>
-													
-				<li>Wangchunshu Zhou*, Yan Zeng*, <u><strong></strong>Shizhe Diao*</strong></u>, Xinsong Zhang*.
-					<br /> <a href="https://arxiv.org/abs/2205.15237">VLUE: A Multi-Task Benchmark for Evaluating Vision-Language Models</a>
-					<br /> ICML 2022</li>  
-
-				<li>Xiao Zhou, Weizhong Zhang, Zonghao Chen, <u><strong>Shizhe Diao</strong></u>, Tong Zhang.
-					<br /> <a href="https://arxiv.org/pdf/2111.05685.pdf">Efficient Neural Network Training via Forward and Backward Propagation Sparsification</a>
-					<br /> NeurIPS 2021</li> 
-
-				<li><u><strong>Shizhe Diao</strong></u>, Ruijia Xu, Hongjin Su, Yilei Jiang, Yan Song, Tong Zhang.
-					<br /> <a href="https://aclanthology.org/2021.acl-long.259.pdf">Taming Pre-trained Language Models with N-gram Representations for Low-Resource Domain Adaptation</a>
-					<br /> ACL 2021</li> 
-						
-				<li><u><strong>Shizhe Diao*</strong></u>, Xinwei Shen*, KaShun SHUM, Yan Song, Tong Zhang.
-					<br /> <a href="https://aclanthology.org/2021.findings-acl.428.pdf">TILGAN: Transformer-based Implicit Latent GAN for Diverse and Coherent Text Generation</a>
-					<br /> Findings of ACL 2021</li>  
-
-				<li><u><strong>Shizhe Diao</strong></u>, Jiaxin Bai, Yan Song, Tong Zhang, and Yonggang Wang.
-					<br /> <a href="https://aclanthology.org/2020.findings-emnlp.425.pdf">ZEN: Pre-training Chinese Text Encoder Enhanced by N-gram Representations</a>
-					<br /> Findings of EMNLP 2020</li>  
-			</ol>
-
-
-			<!-- <ul type="square">
-				<li> FengKuang Chiang, <u><strong>Shizhe Diao</strong></u>, Haotian Ma, Yujun Wang.
-					<br /> <a href="docs/16_ijee3447ns.pdf">Effects of Hands-on Inquiry-Based Learning Using LEGO Materials on the Learning of Eighth-Grade Physics Students.</a> 
-					<br /> International Journal of Engineering Education, vol. 33, ser. 3, 2017, pp. 1098-1103. 3. </li>  
-			</ul>
-
-			<ul type="square">
-				<li>Yunchuan Sun, Mengting Fang, Xinyu Wang, <u><strong>Shizhe Diao</strong></u>.
-					<br /> <a href="docs/GubaLex Guba-oriented sentiment lexicon for big texts in finance.pdf">GubaLex: Guba-oriented sentiment lexicon for big texts in finance</a>
-					<br /> The 13th International Conference on Semantics, Knowledge and Grids</li>  
-			</ul> -->
-
-
-			<!-- <br /> -->
-			<!-- <h3>Preprints</h3>
-			<br />
-			<ol type="square">
-
-				<li>Dylan Zhang, <u><strong>Shizhe Diao</strong></u>, Xueyan Zou, Hao Peng
-					<br /> <a href="https://arxiv.org/abs/2406.06887">PLUM: Preference Learning Plus Test Cases Yields Better Code Language Models	</a>  <font color=red size=4 face="黑体"><i>[NEW]</i></font>
-
-
-				<li>Ziqiang Zheng, Jipeng Zhang, Tuan-Anh Vu, <u><strong>Shizhe Diao</strong></u>, Yue Him Wong Tim, Sai-Kit Yeung
-					<br /> <a href="https://arxiv.org/abs/2310.13596">MarineGPT: Unlocking Secrets of Ocean to the Public </a> 
-
-				<li>Hanze Dong*, <u><strong>Shizhe Diao*</strong></u>, Weizhong Zhang, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2211.11638">Normalizing Flow with Variational Latent Representation</a>
-					   
-				<li>Rui Pan*, <u><strong>Shizhe Diao*</strong></u>, Jianlin Chen, Tong Zhang.
-					<br /> <a href="https://arxiv.org/abs/2211.17201">ExtremeBERT: A Toolkit for Accelerating Pretraining of Customized BERT</a>
-					<br /> <a href="https://arxiv.org/abs/2211.17201">[Paper]</a> <a href="https://github.com/extreme-bert/extreme-bert">[Code]</a> <a href="https://extreme-bert.github.io/extreme-bert-page">[Documentation]</a>
-			</ol> -->
-
-			<!-- <ul type="square">
-				<li><u><strong>Shizhe Diao</strong></u>, Yan Song, and Tong Zhang.
-					<br /> <a href="https://arxiv.org/pdf/2004.09800.pdf">Keyphrase Generation with Cross-Document Attention</a>
-					<br /> arXiv preprint arXiv:2004.09800 (2020)</li>  
-			</ul> -->
-
-<!-- 
-			<ul type="square">
-				<li><u><strong>Shizhe Diao</strong></u>, Zhao Zhang, Qingsong Lv, Xiaoju Ye, Zhichun Wang.
-					<br /> Learning Multifaceted Embeddings for Entity Alignment between Knowledge Graphs
-					<br /> submitted to EMNLP 2019</li>  
-			</ul>
- -->
-			<!-- <ul type="square">
-				<li><u><strong>Shizhe Diao</strong></u>, Jiacheng Yu, Lixin Liu, Xiaojun Wan. <a href="http://59.108.48.37:9022/"><b><font color="#FF0000">[An interesting DEMO]</font></b></a>
-					<br /> MMPoet: Generating Classical Chinese Poems with Multimodal Inputs (Manuscript)
-				</li>  
-			</ul>					 -->
-			<br /> 
-			<h3>Recent Talks</h3>
-			<br /> 
-			<ul type="square">
-				<li> [2024/11] Invited Lecture @ University of Michigan, Ann Arbor, <a href="https://cse595-umich.notion.site/Fall-2024-CSE-595-Natural-Language-Processing-University-of-Michigan-cf5a2e369ff94d4dafac676e1681ca26">CSE 595: Natural Language Processing</a>. Sharing hybrid small language models hosted by <a href="https://web.eecs.umich.edu/~chaijy/">Prof. Joyce Y. Chai</a> </li>
-				<!-- <li> [2023/11] Invited Talk @ Beijing Normal University. </li> -->
-				<li> [2023/10] Invited Lecture @ University of Toronto, graduate NLP course (CSC401/2511). Hosted by <a href="https://www.cs.toronto.edu/~ealee/public/">Prof. Annie Lee</a> </li>
-				<li> [2023/08] Invited Talk @ <a href="https://labhku.github.io/">CVMI Lab, The University of Hong Kong</a>. Hosted by <a href="https://xjqi.github.io/">Prof. Xiaojuan Qi</a> </li>
-				<li> [2023/06] Invited Talk @ University of Toronto. Hosted by <a href="https://sites.google.com/view/qsun">Prof. Qiang Sun</a> </li>
-				<li> [2023/06] Invited Talk @ Shanghai AI Lab <a href="https://www.bilibili.com/video/BV1Pz4y1q7yA">[Recording]</a> </li>
-				<!-- <li> [2023/06] Invited Talk @ 4Paradigm </li> -->
-				<!-- <li> [2023/06] Invited Talk @ 智东西公开课 <a href="https://course.zhidx.com/c/MmVkOWMyZTdmOWU5OGMyNTVhYzM=">[Recording]</a> </li> -->
-				<li> [2023/05] Invited Talk @ Stanford University. Hosted by <a href="https://stanford.edu/~pilanci/">Prof. Mert Pilanci</a> </li>
-			</ul>
-			<br /> 			
-
-			<br /> 
-			<h3>Honors and Awards</h3>
-			<br /> 
-			<ul type="square">
-				<li> <font color=red size=4 face="黑体">Best Demo Paper at NAACL 2024</font></li>
-				<li> <font color=red size=4 face="黑体">Outstanding Paper Award at NAACL 2024</font></li>
-				<li> First Runner-up, School of Engineering PhD Research Excellence Award 2024, HKUST </li>
-				<li> HKUST Overseas Research Award, 2023 </li>
-				<li> HKUST RedBird PhD Scholarship, 2021 </li>
-				<li> Hong Kong PhD Fellowship, 2021-2024 </li>
-				<li> EMNLP 2020, SIGIR 2020, ACL 2020 Student Volunteer, 2020 </li>
-				<li> Merit Student of Beijing, 2019 </li>
-				<li> Outstanding Graduate Student of Beijing, 2019 </li>
-				<li> Top 10 Talent Nomination Award (Only 20 in ~2000), 2018 </li>
-				<li> Meritorious Winner, Interdisciplinary Contest in Modeling (ICM), 2018</li>
-				<li> <a href="docs/certificate.pdf">Runner-up, World Robot Olympiad (WRO), New Delhi, India, 2016</a> </li>  
-				<!-- <li> First-class Scholarship for Academic Achievement (Top 5% in 64), 2015-2017 </li> -->
-				<!-- <li> Merit Student of Beijing Normal University (Top 10% in ~2000), 2015-2017</li> -->
-				<!-- <li> First Prize, Mathematical Contest in Modelling, Beijing Normal University, 2016 </li> -->
-				<!-- <li> Outstanding Volunteer Award, Volunteer Teaching Program of UNICEF, 2015 </li> -->
-				<!-- <li> Excellent Volunteer in BRICS National Education Forum, 2015 </li> -->
-			</ul>
-			<br /> 
-
-			<!-- Research Experience -->
-			<table width="100%" align="left" border="0" cellspacing="0" cellpadding="20">
-			<tbody><tr>
-				<!-- <td width="100%" valign="middle"> -->
+			<!-- Experience -->
+			<div class="card">
 				<h3>Experience</h3>
 				<table>
-					<tbody><tr>
+					<tbody>
+					<tr>
 						<td width="90%">
 							<br>
-							Oct. 2021 - Jul. 2022  <br> 
+							Oct. 2021 - Jul. 2022<br>
 							Research Intern, ByteDance AI Lab, China<br>
 							<b>Vision-Language Foundation Models</b>
-							<br>Advisor: Dr. <a href="https://scholar.google.com/citations?user=nTl5mSwAAAAJ&hl=en">Hang Li</a> and Dr. <a href="https://scholar.google.com/citations?user=BnSQUocAAAAJ&hl=en">Xinsong Zhang</a> <br>
+							<br>Advisor: Dr. <a href="https://scholar.google.com/citations?user=nTl5mSwAAAAJ&hl=en">Hang Li</a> and Dr. <a href="https://scholar.google.com/citations?user=BnSQUocAAAAJ&hl=en">Xinsong Zhang</a>
 						</td>
 						<td width="10%">
-						<img src="figures/bytedance_ailab.png" width="100%" style="display: block; margin-left: auto; margin-right: auto;">
+							<img src="figures/bytedance_ailab.png" width="100%" style="display: block; margin-left: auto; margin-right: auto;">
 						</td>
 					</tr>
 
 					<tr>
 						<td width="90%">
 							<br>
-							Jun. 2019 - Jan. 2020  <br> 
+							Jun. 2019 - Jan. 2020<br>
 							Research Intern, Sinovation Ventures AI Institute, China<br>
 							<b>Pre-trained Language Models</b>
-							<br>Advisor: Prof. <a href="https://clksong.github.io/">Yan Song</a> <br>
+							<br>Advisor: Prof. <a href="https://clksong.github.io/">Yan Song</a>
 						</td>
 						<td width="10%">
-						<img src="figures/sinovation_venture.png" width="100%" style="display: block; margin-left: auto; margin-right: auto;">
+							<img src="figures/sinovation_venture.png" width="100%" style="display: block; margin-left: auto; margin-right: auto;">
 						</td>
 					</tr>
-		
-						
+
 					<tr>
 						<td width="90%">
 							<br>
-							Apr. 2018 - Oct. 2018  <br> 
+							Apr. 2018 - Oct. 2018<br>
 							Research Intern, National University of Singapore (NUS), Singapore<br>
 							<b>Semi-supervised End-to-End Dialogue system</b>
-							<br>Advisor: Prof. <a href="https://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</a> and Dr. <a href="https://sites.google.com/view/wenqianghome/home">Wenqiang Lei</a> <br>
+							<br>Advisor: Prof. <a href="https://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</a> and Dr. <a href="https://sites.google.com/view/wenqianghome/home">Wenqiang Lei</a>
 						</td>
 						<td width="10%">
-						<img src="figures/nus.png" width="65%" style="display: block; margin-left: auto; margin-right: auto;">
+							<img src="figures/nus.png" width="65%" style="display: block; margin-left: auto; margin-right: auto;">
 						</td>
 					</tr>
 
 					<tr>
 						<td width="90%">
 							<br>
-							Mar. 2017 - Mar. 2019  <br> 
+							Mar. 2017 - Mar. 2019<br>
 							Research Intern, Peking University (PKU), China<br>
 							<b>Multimodal Chinese Poem Generation</b>
-							<br>Advisor: Prof. <a href="https://wanxiaojun.github.io/">Xiaojun Wan</a> <br>
+							<br>Advisor: Prof. <a href="https://wanxiaojun.github.io/">Xiaojun Wan</a>
 						</td>
 						<td width="10%">
-						<img src="figures/pku.png" width="65%" style="display: block; margin-left: auto; margin-right: auto;">
+							<img src="figures/pku.png" width="65%" style="display: block; margin-left: auto; margin-right: auto;">
 						</td>
 					</tr>
 
-					
 					<tr>
 						<td width="90%">
 							<br>
-							Sept. 2017 - Dec. 2017  <br> 
-							Exchange Student  <br> 
+							Sept. 2017 - Dec. 2017<br>
+							Exchange Student<br>
 							The Chinese University of Hong Kong (CUHK), HKSAR
 						</td>
 						<td width="10%">
 							<img src="figures/cuhk.png" width="75%" style="display: block; margin-left: auto; margin-right: auto;">
 						</td>
-						</tr>
+					</tr>
 
 					<tr>
 						<td width="90%">
 							<br>
-							Jul. 2017 - Aug. 2017  <br> 
+							Jul. 2017 - Aug. 2017<br>
 							Visiting Student, Ben-Gurion University of the Negev (BGU), Israel<br>
 							<b>Cyber Security and Business Intelligence</b>
 						</td>
 						<td width="10%">
-						<img src="figures/bgu.png" width="65%" style="display: block; margin-left: auto; margin-right: auto;">
+							<img src="figures/bgu.png" width="65%" style="display: block; margin-left: auto; margin-right: auto;">
 						</td>
 					</tr>
-
-					<tr>
-					</tr>
-				</tbody></table>
-				<!-- </td> -->
-			</tr>
-			</tbody></table>
-			<br /> 
-
-
-			<h3> Academic Service </h3>
-			<br />
-			<ul type="square">
-				<li>Demo Track Chair: NAACL 2025 </li>
-				<li>Area Chair / Action Editor: ACL ARR, ACL 2024 Workshop Towards Knowledgeable Language Models, The 2nd Workshop on Knowledgeable Foundation Models @ AAAI 25</li>
-				<li>Journal Reviewer: Transactions on Machine Learning Research (TMLR), Data-centric Machine Learning Research (DMLR), International Journal of Computer Vision (IJCV), Transactions on Knowledge Discovery from Data (TKDD), SIAM Journal on Mathematics of Data Science (SIMODS)</li>
-				<li>Conference Reviewer: ACL ARR, ACL, ICLR, EMNLP, NAACL, NeurIPS, ICML, WWW, KDD, AAAI, IJCAI, EACL, COLM, COLING, WSDM</li>
-				<li>Volunteer: EMNLP 2020, SIGIR 2020, ACL 2020 </li>
-			</ul>
-			<br />
-
-			<!-- <h3> Teaching Assistant </h3>
-			<br />
-			<ul type="square">
-				<li>COMP3711 Design and Analysis of Algorithms (Spring 2023)</li>  
-				<li>COMP2011 Programming with C++ (Spring 2022)</li>
-				<li>COMP3711 Design and Analysis of Algorithms (Fall 2020)</li>  
-				<li>COMP6211E Optimization for Machine Learning (Spring 2020)</li>
-			</ul>
-			<br /> -->
-
-			
-			<h3> Miscellaneous </h3>
-			<br />
-			<ul type="square">
-				<li> I used to be an amateur long-distance runner 🏃. Whenever I am not doing research, I love swimming 🏊, kayaking 🚣, windsurfing 🏄, dinghy sailing ⛵, and stand up paddling!
-				</li>  
-				<li> As the captain, I organized a team to participate in the <a href="https://en.wikipedia.org/wiki/World_Robot_Olympiad">World Robot Olympiad (WRO) </a> and won the second place in India.</li>
-			</ul>
-			<br /><br />
-
+					</tbody>
+				</table>
 			</div>
 
-
-			<br />
-
-			<!-- content end -->
+			<!-- Academic Service -->
+			<div class="card">
+				<h3>Academic Service</h3>
+				<ul type="square">
+					<li>Demo Track Chair: NAACL 2025</li>
+					<li>Area Chair / Action Editor: ACL ARR, ACL 2024 Workshop Towards Knowledgeable Language Models, The 2nd Workshop on Knowledgeable Foundation Models @ AAAI 25</li>
+					<li>Journal Reviewer: Transactions on Machine Learning Research (TMLR), Data-centric Machine Learning Research (DMLR), International Journal of Computer Vision (IJCV), Transactions on Knowledge Discovery from Data (TKDD), SIAM Journal on Mathematics of Data Science (SIMODS)</li>
+					<li>Conference Reviewer: ACL ARR, ACL, ICLR, EMNLP, NAACL, NeurIPS, ICML, WWW, KDD, AAAI, IJCAI, EACL, COLM, COLING, WSDM</li>
+					<li>Volunteer: EMNLP 2020, SIGIR 2020, ACL 2020</li>
+				</ul>
 			</div>
+
+			<!-- Miscellaneous -->
+			<div class="card">
+				<h3>Miscellaneous</h3>
+				<ul type="square">
+					<li> I used to be an amateur long-distance runner. Whenever I am not doing research, I love swimming, kayaking, windsurfing, dinghy sailing, and stand up paddling!</li>
+					<li> As the captain, I organized a team to participate in the <a href="https://en.wikipedia.org/wiki/World_Robot_Olympiad">World Robot Olympiad (WRO)</a> and won the second place in India.</li>
+				</ul>
+			</div>
+
 		</div>
+	</div>
 
+	<!-- Start of StatCounter Code for Default Guide -->
+	<script type="text/javascript">
+		var sc_project=11553029;
+		var sc_invisible=1;
+		var sc_security="844926d0";
+		var scJsHost = (("https:" == document.location.protocol) ?
+			"https://secure." : "http://www.");
+		document.write("<sc"+"ript type='text/javascript' src='" +
+			scJsHost+
+			"statcounter.com/counter/counter.js'></"+"script>");
+	</script>
+	<noscript><div class="statcounter"><a title="Web Analytics Made Easy - StatCounter" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="//c.statcounter.com/11553029/0/844926d0/1/" alt="Web Analytics Made Easy - StatCounter"></a></div></noscript>
+	<!-- End of StatCounter Code for Default Guide -->
 
-
-		<!-- Start of StatCounter Code for Default Guide -->
-		<script type="text/javascript">
-			var sc_project=11553029; 
-			var sc_invisible=1; 
-			var sc_security="844926d0"; 
-			var scJsHost = (("https:" == document.location.protocol) ?
-				"https://secure." : "http://www.");
-			document.write("<sc"+"ript type='text/javascript' src='" +
-				scJsHost+
-				"statcounter.com/counter/counter.js'></"+"script>");
-			</script>
-			<noscript><div class="statcounter"><a title="Web Analytics
-				Made Easy - StatCounter" href="http://statcounter.com/"
-				target="_blank"><img class="statcounter"
-				src="//c.statcounter.com/11553029/0/844926d0/1/" alt="Web
-				Analytics Made Easy - StatCounter"></a></div></noscript>
-				<!-- End of StatCounter Code for Default Guide -->
-
-			</body>
-			</html>
-
-
-
-
+</body>
+</html>
